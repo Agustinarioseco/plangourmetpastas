@@ -444,14 +444,14 @@ a .whatsapp-icon {
 /*---------------------------- 🔹 SECCIÓN "SOBRE NOSOTROS" -----------------------*/
 /* 🔹 SECCIÓN "SOBRE NOSOTROS" */
 .sobre-nosotros {
-  padding: 40px 0px 0px;
   background-color: #252525;
   color: white;
 }
-
+.imagen-portada{
+  width: 100%;
+}
 /* Contenedor General */
 .sobre-nosotros-content {
-  max-width: 1200px;
   margin: 0 auto; /* 🔥 Centra el contenido */
 }
 
@@ -462,7 +462,6 @@ a .whatsapp-icon {
   justify-content: space-between;
   gap: 40px;
   flex-wrap: nowrap; /* ❗❗ Evita que cambie en desktop */
-  margin: 60px 0px;
 }
 
 /* 🔹 Imagen */
@@ -506,6 +505,10 @@ a .whatsapp-icon {
 
 /* 🔹 RESPONSIVE: Cambia la disposición en Mobile */
 @media (max-width: 768px) {
+  .imagen-portada{
+    width: 100%;
+    margin-top: 40px;
+  }
   .sobre-nosotros-item {
       flex-direction: column !important; /* 🔥 En mobile, todos se apilan */
       text-align: center;
