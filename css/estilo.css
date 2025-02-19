@@ -1,0 +1,709 @@
+/* ---------------------------------- */
+/* 1️⃣ FUENTES Y RESETEO GENERAL */
+/* ---------------------------------- */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+/* Reset General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------- */
+/* 2️⃣ ESTILOS GENERALES */
+/* ---------------------------------- */
+body {
+  background-color: #181818;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding-top: 70px; /* Para que el navbar fijo no tape el contenido */
+  overflow-x: hidden;
+}
+
+/* Contenedor Grid */
+#grilla {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%;
+}
+
+/* ---------------------------------- */
+/* 3️⃣ HEADER Y NAVBAR */
+/* ---------------------------------- */
+.header {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+/* Navbar fijo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  transition: background 0.3s ease-in-out;
+  z-index: 9999;
+  padding: 15px 30px;
+}
+
+/* Navbar con fondo al hacer scroll */
+.navbar.scrolled {
+  background-color: #202020;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Logo */
+.imagen-logo {
+  height: 70px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Links del Navbar */
+.navbar-nav {
+  margin-left: auto;
+  gap: 30px;
+}
+
+.navbar-nav .nav-link {
+  color: #f5f5f5;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #D4AE42;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Icono del menú hamburguesa */
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+/* Estilos del menú hamburguesa en mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+      background: #202020;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+      margin-bottom: 10px;
+  }
+}
+
+/* ---------------------------------- */
+/* 4️⃣ PORTADA Y SECCIONES GENERALES */
+/* ---------------------------------- */
+.imagen-full {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 30px;
+}
+/* ---------------------------------- */
+/* 🔹 ESTILOS PARA EL MAIN */
+/* ---------------------------------- */
+.main {
+  padding: 40px 0px 0px;
+  text-align: center;
+}
+
+/* ---------------------------------- */
+/* 🔹 SECCIÓN DE CARDS */
+/* ---------------------------------- */
+.container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+  width: 300px;
+  background: #202020;
+  border-radius: 5px;
+  border: 1px solid #c8a559;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Imágenes de las cards */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Título dentro de cada card */
+.card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #f5f5f5;
+}
+
+/* Botón dentro de las cards */
+.btn {
+  display: inline-block;
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #c8a559;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #c8a559;
+  color: black;
+}
+
+/* ---------------------------------- */
+/* 🔹 SECCIÓN "COMUNIDAD PLANGUS" */
+/* ---------------------------------- */
+.comunidad-section {
+  padding: 40px 20px;
+  background-color: #252525;
+  color: white;
+  margin-top: 30px;
+}
+
+/* Contenedor */
+.comunidad-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+/* Imagen */
+.comunidad-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.comunidad-image img {
+  width: 100%;
+  height: auto;
+  max-height: 390px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Texto */
+.comunidad-text {
+  width: 50%;
+  max-width: 500px;
+}
+
+.comunidad-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #c8a559;
+}
+
+.comunidad-text p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Botón */
+.btn-comunidad {
+  display: inline-block;
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #c8a559;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.btn-comunidad:hover {
+  background: #c8a559;
+  color: black;
+}
+
+/* 🔹 RESPONSIVE: Ajustar "Comunidad Plangus" en Mobile */
+@media (max-width: 768px) {
+  .comunidad-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .comunidad-image,
+  .comunidad-text {
+      width: 100%;
+  }
+}
+
+/* ---------------------------------- */
+/* 5️⃣ BOTÓN DE WHATSAPP FLOTANTE */
+/* ---------------------------------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Icono de WhatsApp */
+.whatsapp-float img {
+  width: 60px;
+  transition: 0.3s;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+
+/* Opciones de WhatsApp */
+.whatsapp-options {
+  display: none; /* Inicialmente oculto */
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 180px;
+  text-align: left;
+}
+
+/* Estilo para los links dentro del menú */
+.whatsapp-options a {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  color: #202020;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Cambia el color cuando pasás el mouse */
+.whatsapp-options a:hover {
+  background: #bbb;
+  border-radius: 5px;
+}
+
+/* Tamaño correcto del icono de WhatsApp */
+a .whatsapp-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*---------------------------- 🔹 SECCIÓN "SOBRE NOSOTROS" -----------------------*/
+/* 🔹 SECCIÓN "SOBRE NOSOTROS" */
+.sobre-nosotros {
+  padding: 40px 0px 0px;
+  background-color: #252525;
+  color: white;
+}
+
+/* Contenedor General */
+.sobre-nosotros-content {
+  max-width: 1200px;
+  margin: 0 auto; /* 🔥 Centra el contenido */
+}
+
+/* 🔹 Contenedor de cada bloque (Imagen + Texto) */
+.sobre-nosotros-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap; /* ❗❗ Evita que cambie en desktop */
+  margin-bottom: 50px;
+}
+
+/* 🔹 Imagen */
+.sobre-nosotros-item .imagen {
+  width: 50%;
+  max-width: 500px;
+}
+
+.sobre-nosotros-item .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 🔹 Texto */
+.sobre-nosotros-item .texto {
+  width: 50%;
+  max-width: 500px;
+}
+
+/* 🔹 Alternar lados (Izquierda) */
+.sobre-nosotros-item.izquierda {
+  flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+}
+
+/* 🔹 Alternar lados (Derecha) */
+.sobre-nosotros-item.derecha {
+  flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
+}
+
+/* 🔹 RESPONSIVE: Cambia la disposición en Mobile */
+@media (max-width: 768px) {
+  .sobre-nosotros-item {
+      flex-direction: column !important; /* 🔥 En mobile, todos se apilan */
+      text-align: center;
+      align-items: center;
+  }
+
+  .sobre-nosotros-item .texto,
+  .sobre-nosotros-item .imagen {
+      width: 100%;
+  }
+
+  .sobre-nosotros-item .imagen img {
+      width: 80%; /* 🔥 Hace la imagen más pequeña en mobile */
+      margin-top: 15px;
+  }
+}
+
+/* 🔹 SECCIÓN "NUESTRAS PASTAS" */
+.nuestras-pastas {
+  padding: 60px 20px;
+  background-color: #252525;
+  color: white;
+}
+
+/* Contenedor General */
+.pastas-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+  margin-bottom: 50px;
+}
+
+/* Imagen */
+.pastas-item .imagen {
+  width: 50%;
+  max-width: 500px;
+}
+
+.pastas-item .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Texto */
+.pastas-item .texto {
+  width: 50%;
+  max-width: 500px;
+}
+
+/* Alternar lados */
+.pastas-item.izquierda {
+  flex-direction: row;
+}
+
+.pastas-item.derecha {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pastas-item {
+      flex-direction: column !important;
+      text-align: center;
+      align-items: center;
+  }
+  .pastas-item .texto,
+  .pastas-item .imagen {
+      width: 100%;
+  }
+}
+
+/* -----------------🔹 SECCIÓN FECHAS ESPECIALES ----------------------------*/
+/* 🔹 SECCIÓN FECHAS ESPECIALES */
+.fechas-especiales {
+  padding: 60px 20px;
+  background-color: #252525;
+  color: white;
+  text-align: center;
+}
+
+/* 🔹 Contenedor general del botón de descuentos */
+.descuentos-link {
+  width: 100%; /* 🔥 Hace que ocupe toda la línea */
+  display: flex;
+  justify-content: center; /* 🔥 Centra horizontalmente */
+  margin: 30px 0; /* 🔥 Agrega espacio arriba y abajo */
+  padding-top: 20px; /* 🔥 Espacio extra para que no quede pegado al texto */
+}
+
+/* 🔹 Estilo del botón */
+.btn-descuentos {
+  background: #c8a559;
+  color: black;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  border: none;
+  display: block; /* 🔥 Asegura que ocupe toda la línea en mobile */
+  text-align: center;
+}
+
+.btn-descuentos:hover {
+  background: #d4ae42;
+}
+
+/* 🔹 GRID DE FECHAS ESPECIALES */
+.fechas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* 🔹 Tarjetas de cada fecha especial */
+.fecha-item {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 🔹 COLORES SEGÚN LA FECHA */
+.fecha-item.rojo {
+  background-color: #d9534f;
+}
+
+.fecha-item.bandera-italia {
+  background: linear-gradient(90deg, #008000 33%, white 33%, white 66%, #ff0000 66%);
+  color: black;
+}
+
+.fecha-item.amarillo {
+  background-color: #ffd700;
+  color: black;
+}
+
+.fecha-item.naranja {
+  background-color: #ff8c00;
+}
+
+/* 🔹 RESPONSIVE */
+@media (max-width: 768px) {
+  .fechas-grid {
+      grid-template-columns: 1fr;
+  }
+
+  /* 🔹 Ajuste del botón en mobile */
+  .descuentos-link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+  }
+
+  .btn-descuentos {
+      width: 90%;
+      max-width: 400px;
+  }
+}
+/* 🔹 SECCIÓN CONTACTO */
+.contacto {
+  padding: 60px 20px;
+  background-color: #252525;
+  color: white;
+  text-align: center;
+}
+
+/* 🔹 Información de Contacto */
+.info-contacto {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.info-item {
+  flex: 1;
+  min-width: 250px;
+  background: #181818;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-item h3 {
+  color: #c8a559;
+}
+
+/* 🔹 FORMULARIO */
+.form-contacto {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-contacto button {
+  background: #c8a559;
+  color: black;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-contacto button:hover {
+  background: #d4ae42;
+}
+
+/* 🔹 RESPONSIVE */
+@media (max-width: 768px) {
+  .info-contacto {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+/* ---------------------------------- */
+/* 6️⃣ FOOTER */
+/* ---------------------------------- */
+/* 🔹 FOOTER - OCUPA TODO EL ANCHO */
+.footer {
+  width: 100%; /* 🔥 Ocupar el ancho total de la pantalla */
+  background-color: #181818;
+  color: #c8a559;
+  padding: 40px 0px 0px;
+  position: relative; /* Asegura que no se superponga */
+  bottom: 0;
+}
+
+/* Contenedor del Footer */
+.footer-content {
+  width: 100%; /* 🔥 Ahora el contenido se expande completamente */
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 40px;
+}
+
+/* Columnas dentro del Footer */
+.footer-info,
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Títulos */
+.footer h3,
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+/* 🔹 Estilos para las listas del Footer */
+.footer-links ul,
+.footer-social ul {
+    list-style: none; /* ❌ Elimina las viñetas */
+    padding: 0; /* 🔥 Elimina espacio extra */
+    margin: 0; /* 🔥 Asegura que no haya márgenes indeseados */
+}
+
+/* 🔹 Ajuste de los enlaces en las listas */
+.footer-links ul li,
+.footer-social ul li {
+    margin: 5px 0; /* 🔥 Ajusta el espaciado entre elementos */
+}
+
+/* 🔹 Estilos de los enlaces */
+.footer-links ul li a,
+.footer-social ul li a {
+    color: #f5f5f5; /* Color rojo gourmet */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🔥 Efecto hover */
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+    color: #c8a559;
+}
+
+/* 🔹 Pie de página (copyright) */
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0px 0px;
+  background-color: #181818; /* Un poco más oscuro que el footer */
+  color: #fff;
+  font-size: 14px;
+}
+/* 🔹 RESPONSIVE - Ajustes en Mobile */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 0 20px;
+  }
+}

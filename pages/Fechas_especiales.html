@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan gourmet</title>
+    <link rel="icon" type="image/png" href="../img/Recurso 3.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/estilo.css">
+
+</head>
+<body id="grilla">
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid"> <!-- Usamos container-fluid para que ocupe todo el ancho -->
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand" href="../index.html">
+          <img class="imagen-logo" src="../img/Recurso 5.png" alt="Logo Plan Gourmet">
+        </a>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menú alineado a la derecha -->
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/quienes_somos.html">¿Quiénes somos?</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/nuestras_pastas.html">Nuestras pastas</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/Fechas_especiales.html">Fechas especiales</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/Contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!--main de inicio, contiene texto de bienvenida, carrusel de imagenes, lista de inicio-->
+  <!-- 🔹 Sección Principal -->
+  <main class="main fechas-especiales">
+    <section class="container">
+        <h1>🎉 Fechas Especiales y Descuentos 🎉</h1>
+        <p>¡Todos los meses celebramos las pastas con descuentos exclusivos! Anotá las fechas y no te las pierdas. 🍝</p>
+
+        <!-- 🔹 Botón para Ver Descuentos del Día -->
+        <div class="descuentos-link">
+            <a href="https://www.instagram.com/plangourmet" target="_blank" class="btn-descuentos">📅 Ver Descuentos del Día</a>
+        </div>
+
+        <!-- 🔹 Bloques de Fechas Especiales -->
+        <div class="fechas-grid">
+            <div class="fecha-item rojo">
+                <h2>🥟 8 de cada mes - Día del Sorrentino</h2>
+                <p>🎉 20% de descuento en sorrentinos.</p>
+            </div>
+
+            <div class="fecha-item bandera-italia">
+                <h2>🍝 11 de cada mes - Día del Fideo</h2>
+                <p>🇮🇹 Celebramos con sabores italianos y promos especiales.</p>
+            </div>
+
+            <div class="fecha-item amarillo">
+                <h2>🟡 20 de cada mes - Día del Raviolón</h2>
+                <p>🌟 Raviolones artesanales con descuentos únicos.</p>
+            </div>
+
+            <div class="fecha-item naranja">
+                <h2>🟠 29 de cada mes - Día de la Lasaña</h2>
+                <p>🍽️ Disfrutá de lasañas con promociones exclusivas.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<!--pie de pagina-->
+<footer class="footer">
+  <div class="footer-content">
+      <!-- Información de la marca -->
+      <div class="footer-info">
+          <h3>Plan Gourmet</h3>
+          <p>Pastas de autor, experiencias inolvidables.</p>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="footer-links">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pages/quienes_somos.html">¿Quiénes somos?</a></li>
+            <li><a href="./pages/Fechas_especiales.html">Fechas especiales</a></li>
+            <li><a href="./pages/Contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-social">
+        <h4>Seguinos</h4>
+        <ul>
+            <li><a href="https://www.instagram.com/plangourmet" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/PlanGourmetPastas/">Facebook</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Plan Gourmet 2025. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

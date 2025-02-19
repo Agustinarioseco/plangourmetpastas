@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan gourmet</title>
+    <link rel="icon" type="image/png" href="./img/Recurso 3.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+</head>
+<body id="grilla">
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid"> <!-- Usamos container-fluid para que ocupe todo el ancho -->
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand" href="./index.html">
+          <img class="imagen-logo" src="./img/Recurso 5.png" alt="Logo Plan Gourmet">
+        </a>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menú alineado a la derecha -->
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pages/quienes_somos.html">¿Quiénes somos?</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pages/nuestras_pastas.html"> Nuestras pastas</a> </li>
+            <li class="nav-item"><a class="nav-link" href="./pages/Fechas_especiales.html">Fechas especiales</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pages/Contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!--main de inicio, contiene texto de bienvenida, carrusel de imagenes, lista de inicio-->
+<main class="main"> 
+      <!--portada-->
+      <img src="./img/portada.png" alt="Imagen destacada" class="imagen-full">
+<!--titulos-->      
+<div class="section-title">
+  <h2>Descubrí el mejor Plan Gourmet para vos</h2>
+  <p>Explorá nuestras opciones y disfrutá de una experiencia gourmet única.</p>
+</div>
+<!--cads--> 
+<div class="container">
+    <div class="card">
+        <h2>Menú Digital</h2>
+        <img src="./img/menu.png" alt="Menú Digital">
+        <a href="https://www.canva.com/design/DAEvy4wWrEk/T8pyQ9yecM_FigUOxYoHUg/view?utm_content=DAEvy4wWrEk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank" class="btn">Ver Menú</a>
+    </div>
+    <div class="card">
+        <h2>Sucursales</h2>
+        <img src="./img/sucursales.png" alt="Sucursales">
+        <a href="https://www.google.com/maps" target="_blank" class="btn">Ver Ubicaciones</a>
+    </div>
+    <div class="card">
+        <h2>PedidosYa</h2>
+        <img src="./img/pedidoya.png" alt="Sucursales">
+        <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-belgrano-85fd80de-6c7e-4eca-9bad-051342083f06-menu?search=plan%20gourmet" target="_blank" class="btn">Pedir Ahora</a>
+    </div>
+</div>
+<!--boton whatsapp-->
+        <div class="whatsapp-float">
+          <img src="img/whatsapp.png" alt="WhatsApp" onclick="toggleWhatsApp()">
+          <div class="whatsapp-options" id="whatsapp-options">
+              <a href="https://wa.me/5492994027353" target="_blank">
+                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Belgrano
+              </a>
+              <a href="https://wa.me/5492994730935" target="_blank">
+                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Leloir
+              </a>
+              <a href="https://wa.me/5492994068032" target="_blank">
+                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">San Luis
+              </a>
+              <a href="https://wa.me/5492996561692" target="_blank">
+                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Gourmet Lab
+              </a>
+          </div>
+        </div>
+<!--comunidad plangu-->
+<section class="comunidad-section">
+  <div class="container">
+      <div class="comunidad-content">
+          <div class="comunidad-image">
+              <img src="img/comunidad.jpg" alt="Comunidad Plangus">
+          </div>
+          <div class="comunidad-text">
+              <h2>Comunidad Plangus</h2>
+              <p>Sumate a nuestra comunidad y compartí tu pasión por las pastas de autor.</p>
+              <p>📸 Subí tus fotos y etiquetanos en Instagram con #Plangus</p>
+              <p>💬 Comentá y recomendanos a tus amigos</p>
+              <p>🎁 Participá de sorteos exclusivos para miembros de la comunidad</p>
+              <a href="https://www.instagram.com/plangourmet" target="_blank" class="btn-comunidad">¡Sumate ahora!</a>
+          </div>
+      </div>
+  </div>
+</section>
+</main>
+<!--pie de pagina-->
+<footer class="footer">
+  <div class="footer-content">
+      <!-- Información de la marca -->
+      <div class="footer-info">
+          <h3>Plan Gourmet</h3>
+          <p>Pastas de autor, experiencias inolvidables.</p>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="footer-links">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pages/quienes_somos.html">¿Quiénes somos?</a></li>
+            <li><a href="./pages/Fechas_especiales.html">Fechas especiales</a></li>
+            <li><a href="./pages/Contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-social">
+        <h4>Seguinos</h4>
+        <ul>
+            <li><a href="https://www.instagram.com/plangourmet" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/PlanGourmetPastas/">Facebook</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Plan Gourmet 2025. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
