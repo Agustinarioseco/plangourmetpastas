@@ -48,26 +48,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    let botonUbicaciones = document.querySelector(".desplegar-ubicaciones");
-    let listaUbicaciones = document.querySelector(".ubicaciones-lista");
-
-    if (!botonUbicaciones || !listaUbicaciones) {
-        console.error("❌ No se encontró el botón o la lista de ubicaciones.");
-        return;
-    }
-
-    botonUbicaciones.addEventListener("click", function () {
-        listaUbicaciones.classList.toggle("visible"); // 🔄 Alternar clase visible
-        console.log("📌 Estado de la lista:", listaUbicaciones.classList.contains("visible") ? "ABIERTA" : "CERRADA");
-    });
-
-    // Cierra la lista si se hace clic fuera de ella
-    document.addEventListener("click", function (event) {
-        if (!listaUbicaciones.contains(event.target) && !botonUbicaciones.contains(event.target)) {
-            listaUbicaciones.classList.remove("visible");
-            console.log("🔴 Lista cerrada al hacer clic fuera.");
-        }
-    });
-});
-
