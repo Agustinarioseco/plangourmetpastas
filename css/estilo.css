@@ -125,9 +125,7 @@ body {
   text-align: center;
 }
 
-/* ---------------------------------- */
-/* 🔹 SECCIÓN DE CARDS */
-/* ---------------------------------- */
+/* 🔹 Sección de Cards */
 .container {
   margin-top: 10px;
   display: flex;
@@ -136,7 +134,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Cards */
+/* 🔹 Estilos Generales de las Cards */
 .card {
   width: 300px;
   background: #202020;
@@ -145,25 +143,21 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   text-align: center;
-  padding: 10px;
-  margin: 20px;
+  padding: 20px;
+  margin: 25px;
 }
 
-/* Imágenes de las cards */
+/* 🔹 Imágenes dentro de las Cards */
 .card img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
-
-/* Título dentro de cada card */
-.card h2 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  color: #f5f5f5;
+.card h2{
+  color: #c8a559;
 }
 
-/* Botón dentro de las cards */
+/* 🔹 Botones dentro de las Cards */
 .btn {
   display: inline-block;
   background: #222;
@@ -182,6 +176,76 @@ body {
   background: #c8a559;
   color: black;
 }
+
+/* 🔹 Estilos para la Card de Ubicaciones */
+.card.ubicaciones {
+  position: relative;
+}
+
+/* 🔹 Botón para desplegar ubicaciones */
+.desplegar-ubicaciones {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* 🔹 Estilos de la Lista de Ubicaciones */
+.ubicaciones-lista {
+  display: none;  /* 🔥 Oculta por defecto */
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  background: #303030; /* Fondo oscuro */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* 🔥 Mostrar lista cuando se activa */
+.ubicaciones-lista.visible {
+  display: flex !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* 🔹 Enlaces dentro de la lista */
+.ubicaciones-lista a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background: #444;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+  display: block !important; /* 🔥 Asegura que los enlaces sean visibles */
+    opacity: 1 !important;
+}
+
+.ubicaciones-lista a:hover {
+  background: #c8a559;
+  color: black;
+}
+
+/* 🔹 Responsive para Mobile */
+@media (max-width: 768px) {
+  .card {
+      width: 100%;
+  }
+  
+  .ubicaciones-lista {
+      position: relative;
+      width: auto;
+      position: relative !important;
+    z-index: 9999 !important;
+  }
+}
+
 
 /* ---------------------------------- */
 /* 🔹 SECCIÓN "COMUNIDAD PLANGUS" */
