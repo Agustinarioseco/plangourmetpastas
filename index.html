@@ -12,6 +12,9 @@
     crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 </head>
 <body id="grilla">
@@ -60,16 +63,13 @@
 
   <!-- Card 2: Sucursales (Ubicaciones) -->
   <div class="card ubicaciones">
-      <h2>Sucursales</h2>
-      <img src="./img/sucursales.png" alt="Sucursales">
-      <button class="btn desplegar-ubicaciones">Ver Ubicaciones</button>
-      <div class="ubicaciones-lista">
-          <a href="https://goo.gl/maps/XXXXX" target="_blank">📍 Belgrano</a>
-          <a href="https://goo.gl/maps/YYYYY" target="_blank">📍 Leloir</a>
-          <a href="https://goo.gl/maps/ZZZZZ" target="_blank">📍 San Luis</a>
-          <a href="https://goo.gl/maps/WWWWW" target="_blank">📍 Gourmet Lab</a>
-      </div>
-  </div>
+    <h2>Sucursales</h2>
+    <img src="./img/sucursales.png" alt="Sucursales">
+    <button type="button" class="btn desplegar-ubicaciones" data-bs-toggle="modal" data-bs-target="#modalUbicaciones">
+        Ver Ubicaciones
+    </button>
+</div>
+
 
   <!-- Card 3: PedidosYa -->
   <div class="card">
@@ -106,7 +106,7 @@
               <p>📸 Subí tus fotos y etiquetanos en Instagram con #Plangus</p>
               <p>💬 Comentá y recomendanos a tus amigos</p>
               <p>🎁 Participá de sorteos exclusivos para miembros de la comunidad</p>
-              <a href="https://www.instagram.com/plangourmet" target="_blank" class="btn-comunidad">¡Sumate ahora!</a>
+              <a href="https://www.instagram.com/plangourmetpastas/" target="_blank" class="btn-comunidad">¡Sumate ahora!</a>
           </div>
       </div>
   </div>
@@ -135,7 +135,7 @@
     <div class="footer-social">
         <h4>Seguinos</h4>
         <ul>
-            <li><a href="https://www.instagram.com/plangourmet" target="_blank">Instagram</a></li>
+            <li><a href="https://www.instagram.com/plangourmetpastas/" target="_blank">Instagram</a></li>
             <li><a href="https://www.facebook.com/PlanGourmetPastas/">Facebook</a></li>
         </ul>
     </div>
@@ -145,6 +145,25 @@
 </div>
 </footer>
 
+<!-- 🔥 MODAL Bootstrap -->
+<div class="modal fade" id="modalUbicaciones" tabindex="-1" aria-labelledby="modalUbicacionesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalUbicacionesLabel">Nuestras Sucursales</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <ul>
+                  <li><a href="https://goo.gl/maps/XXXXX" target="_blank">📍 Belgrano</a></li>
+                  <li><a href="https://goo.gl/maps/YYYYY" target="_blank">📍 Leloir</a></li>
+                  <li><a href="https://goo.gl/maps/ZZZZZ" target="_blank">📍 San Luis</a></li>
+                  <li><a href="https://goo.gl/maps/WWWWW" target="_blank">📍 Plan Box</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
 
     <script src="./js/script.js"></script>
 </body>
