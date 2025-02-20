@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let mensajesFechas = {
         8: "🥟 ¡Hoy es el Día de los Sorrentinos! 20% de descuento en sorrentinos.",
         11: "🍝 ¡Día de los Fideos! Celebramos con los colores de Italia.",
-        20: "🟡 ¡Día de los Raviolones! Aprovechá nuestras ofertas.",
+        20: "Hoy es #20R, tenemos 20% de descuento en variedades selecionadas. ¡No te lo pierdas!",
         29: "🟠 ¡Día de la Lasagna! Disfrutá el mejor sabor casero."
     };
 

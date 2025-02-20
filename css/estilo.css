@@ -987,6 +987,9 @@ ul, ol {
   max-width: 400px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+.popup-content h2{
+  color: #c8a559;
+}
 
 /* 🔹 Botón de cierre */
 .popup-close {
