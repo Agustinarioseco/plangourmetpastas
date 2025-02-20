@@ -1052,3 +1052,97 @@ ul, ol {
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* 🔥 Más lento */
 }
 
+/* 🔹 Para pantallas menores a 700px */
+@media (max-width: 700px) {
+    
+  /* 🔹 Ajustar el tamaño de los textos en general */
+  body {
+      font-size: 16px; /* Ajusta el tamaño del texto para mejor lectura */
+  }
+
+  /* 🔹 Hacer que el encabezado y el menú sean más compactos */
+  .header {
+      padding: 0px 0;
+  }
+main p {
+    width: 90%;
+  }
+
+  .navbar-brand img {
+      width: 120px; /* Reducir tamaño del logo */
+  }
+
+  .navbar-nav {
+      text-align: center;
+      font-size: 16px; /* Menú más claro */
+  }
+
+  /* 🔹 Asegurar que los títulos sean más compactos */
+  h1, h2 {
+      font-size: 22px;
+  }
+
+  /* 🔹 Ajustar el tamaño del pop-up */
+  .popup {
+      width: 100%; /* Que no ocupe toda la pantalla */
+      font-size: 14px; /* Reducir tamaño del texto */
+      padding: 15px;
+  }
+
+  /* 🔹 Asegurar que las tarjetas (cards) no se deformen */
+  .card {
+      width: 90%; /* Adaptarse al tamaño de la pantalla */
+      margin: 10px auto;
+  }
+
+  /* 🔹 Imágenes responsivas */
+  img {
+      max-width: 100%;
+  }
+  .fechas-grid{
+    padding: 0px 30px;
+  }
+
+  /* 🔹 Ajuste de las secciones de contacto */
+  .info-contacto {
+      flex-direction: column; /* Pasar las cards a formato columna */
+      gap: 15px;
+      text-align: center;
+  }
+
+  .info-item {
+      width: 90%;
+      padding: 15px;
+  }
+
+  /* 🔹 Ajustar formulario de contacto */
+  .form-contacto {
+      width: 90%;
+      max-width: 350px;
+      margin: 20px auto;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea {
+      font-size: 14px; /* Reducir tamaño de la fuente */
+  }
+
+  /* 🔹 Footer más compacto */
+  .footer {
+      padding: 20px 10px;
+  }
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-links ul {
+      padding: 0;
+  }
+
+  .footer-links li {
+      display: block;
+      margin: 5px 0;
+  }
+}
