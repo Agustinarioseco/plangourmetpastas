@@ -48,12 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // ❗ Verificar si estamos en "index.html" o en la raíz "/"
-    if (!window.location.pathname.includes("index.html") && window.location.pathname !== "/") {
-        console.log("🟡 Popup desactivado en esta página.");
-        return; // Detiene la ejecución si no estamos en index.html
-    }
-
     let hoy = new Date();
     let dia = hoy.getDate();
     let popup = document.getElementById("popupFechas");
@@ -71,17 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Función para mostrar el Pop-Up con animación
     function mostrarPopup() {
-        if (!popUpMostrado && mensajesFechas[dia]) {
+        if (!popUpMostrado && mensajesFechas[dia] && popup) {
             mensajePopup.innerText = mensajesFechas[dia];
             popup.style.display = "flex"; // Primero, se muestra
             setTimeout(() => {
                 popup.classList.add("mostrar"); // Luego, activa la animación de fade-in suave
-            }, 50); // 🔥 Pequeño retraso para que la animación funcione bien
+            }, 50);
             popUpMostrado = true; // Evita que vuelva a mostrarse
         }
     }
 
-    // Opción 1: Mostrar el Pop-Up después de 5 segundos
+    // Espera 5 segundos antes de mostrar el popup
     setTimeout(mostrarPopup, 5000);
 
     // Opción 2: Mostrar el Pop-Up cuando el usuario scrollea
@@ -95,12 +89,36 @@ document.addEventListener("DOMContentLoaded", function () {
 // Función para cerrar el Pop-Up con fade-out más lento
 function cerrarPopup() {
     let popup = document.getElementById("popupFechas");
-    popup.classList.add("ocultar"); // Agrega la animación de salida
+    if (popup) {
+        popup.classList.add("ocultar"); // Agrega la animación de salida
 
-    // Espera que termine la animación antes de ocultarlo
-    setTimeout(() => {
-        popup.style.display = "none";
-        popup.classList.remove("mostrar", "ocultar"); // Elimina las clases para reutilizar la animación
-    }, 1500); // 🔥 1.5 segundos para hacer el fade-out más lento
+        // Espera que termine la animación antes de ocultarlo
+        setTimeout(() => {
+            popup.style.display = "none";
+            popup.classList.remove("mostrar", "ocultar"); // Elimina las clases para reutilizar la animación
+        }, 1500);
+    }
 }
 
+
+document.getElementById("contactoForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita la recarga de la página
+
+    let formData = new FormData(this);
+
+    fetch(this.action, {
+        method: this.method,
+        body: formData,
+        headers: { "Accept": "application/json" }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.ok) {
+            document.getElementById("mensajeConfirmacion").classList.add("visible");
+            document.getElementById("contactoForm").reset(); // Limpia el formulario después de enviarlo
+        } else {
+            alert("❌ Error al enviar el mensaje. Intenta nuevamente.");
+        }
+    })
+    .catch(error => console.error("Error en el envío:", error));
+});
