@@ -30,7 +30,6 @@
 body {
   background-color: #181818;
   color: white;
-  font-family: "Poppins", sans-serif;
   padding-top: 70px; /* Para que el navbar fijo no tape el contenido */
   overflow-x: hidden;
 }
@@ -109,7 +108,7 @@ body {
 /* Estilos del menú hamburguesa en mobile */
 @media (max-width: 700px) {
   .navbar-collapse {
-      background: #202020;
+      background: #000;
       padding: 10px;
       border-radius: 5px;
       text-align: center;
@@ -145,6 +144,10 @@ body {
 .section-title h2{
   font-family: "cardo ";
   font-size: 35px;
+}
+main .section-title p{
+  font-size: 20px;
+  font-family: "cardo regular";
 }
 /* 🔹 Sección de Cards */
 .container {
@@ -458,6 +461,14 @@ a .whatsapp-icon {
 .sobre-nosotros-content {
   margin: 0 auto; /* 🔥 Centra el contenido */
 }
+.sobre-nosotros-content h2{
+  font-family: "cardo bold";
+  font-size: 36px;
+  color: #c8a559;
+}
+.sobre-nosotros-content p{
+  font-size: 20px;
+}
 
 /* 🔹 Contenedor de cada bloque (Imagen + Texto) */
 .sobre-nosotros-item {
@@ -535,7 +546,17 @@ a .whatsapp-icon {
   background-color: #252525;
   color: white;
 }
+.nuestras-pastas .section-title h2{
+  color: #c8a559;
+  font-family: "cardo bold";
+  font-size: 36px;
+}
 
+.nuestras-pastas .section-title p{
+  color: #f5f5f5;
+  font-size: 20px;
+  font-family: "cardo regular";
+}
 /* Contenedor General */
 .pastas-item {
   display: flex;
@@ -549,6 +570,7 @@ a .whatsapp-icon {
 
 .pastas-item .texto h2{
   font-size: 36px;
+  font-family: "cardo bold";
   color: #c8a559;
 }
 
@@ -610,9 +632,23 @@ a .whatsapp-icon {
   margin: 30px 0; /* 🔥 Agrega espacio arriba y abajo */
   padding-top: 20px; /* 🔥 Espacio extra para que no quede pegado al texto */
 }
-
+.fechas-especiales h2{
+   font-family: "cardo bold";
+   color: #c8a559;
+   font-size: 36px;
+}
+.fechas-especiales p{
+  font-family: "cardo regular";
+  font-size: 20px;
+  color: #f5f5f5;
+}
+.titulo-fechas h2{
+  color: #f5f5f5;
+  margin-top: 50px;
+}
 /* 🔹 Estilo del botón */
 .btn-descuentos {
+  font-family: "cardo bold";
   background: #c8a559;
   color: black;
   padding: 15px 30px;
@@ -637,6 +673,7 @@ a .whatsapp-icon {
   gap: 30px;
   max-width: 1000px;
   margin: 40px auto;
+  padding: 0px 20px;
 }
 
 /* 🔹 Tarjetas de cada fecha especial */
@@ -659,7 +696,7 @@ a .whatsapp-icon {
   font-family: "cardo bold";
 }
 .oncef{
-  color: #1F4322;
+  color: #378d3e;
   font-size: 44px;
   font-family: "cardo bold";
 }
@@ -722,7 +759,7 @@ a .whatsapp-icon {
 }
 
 /* 🔹 Contenedor Principal */
-.container {
+.container-contacto {
   max-width: 1100px;
   margin: 0 auto;
 }
