@@ -75,15 +75,20 @@
           </div>
 
           <!-- 🔹 Formulario de Contacto -->
-          <form class="form-contacto" action="https://formspree.io/f/manqadvo" method="POST">
-            <h2>📬 Envíanos tu consulta</h2>
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu email" required>
-            <textarea name="mensaje" placeholder="Escribí tu mensaje" rows="5" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-        
-        
+          <!-- 🔹 Formulario de Contacto -->
+<form id="contactoForm" action="https://formspree.io/f/manqadvo" method="POST">
+  <h2>📬 Envíanos tu consulta</h2>
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="email" placeholder="Tu email" required>
+  <textarea name="mensaje" placeholder="Escribí tu mensaje" rows="5" required></textarea>
+  <button type="submit" class="btn">Enviar Mensaje</button>
+</form>
+
+<!-- 🔹 Mensaje de confirmación (Oculto por defecto) -->
+<div id="mensajeConfirmacion" class="mensaje-confirmacion oculto">
+  ✅ ¡Gracias por tu mensaje! Nos pondremos en contacto pronto.
+</div>
+
       </section>
   </main>
 <!--pie de pagina-->
