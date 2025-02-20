@@ -596,7 +596,6 @@ a .whatsapp-icon {
 /* -----------------🔹 SECCIÓN FECHAS ESPECIALES ----------------------------*/
 /* 🔹 SECCIÓN FECHAS ESPECIALES */
 .fechas-especiales {
-  padding: 60px 20px;
   background-color: #252525;
   color: white;
   text-align: center;
@@ -641,6 +640,7 @@ a .whatsapp-icon {
 
 /* 🔹 Tarjetas de cada fecha especial */
 .fecha-item {
+  background-color: #181818;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -648,25 +648,29 @@ a .whatsapp-icon {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  font-family: "cardo bold";
+  border: 1px solid #c8a559;
 }
-
-/* 🔹 COLORES SEGÚN LA FECHA */
-.fecha-item.rojo {
-  background-color: #d9534f;
+ 
+.ochos{
+  color: #930715;
+  font-size: 44px;
+  font-family: "cardo bold";
 }
-
-.fecha-item.bandera-italia {
-  background: linear-gradient(90deg, #008000 33%, white 33%, white 66%, #ff0000 66%);
-  color: black;
+.oncef{
+  color: #1F4322;
+  font-size: 44px;
+  font-family: "cardo bold";
 }
-
-.fecha-item.amarillo {
-  background-color: #ffd700;
-  color: black;
+.veinter{
+  color: #D69E06;
+  font-size: 44px;
+  font-family: "cardo bold";
 }
-
-.fecha-item.naranja {
-  background-color: #ff8c00;
+.veintinuevel{
+  color: #BB5000;
+  font-size: 44px;
+  font-family: "cardo bold"
 }
 
 /* 🔹 RESPONSIVE */
@@ -858,4 +862,62 @@ ul, ol {
   }
 }
 
+
+
+/*----------FECHAS ESPECIALES POP UP-----------------*/
+
+/* 🔹 Pop-Up (Oculto por defecto con opacidad 0 y más pequeño) */
+.popup {
+  display: none; /* 🔥 Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* 🔥 Comienza con opacidad 0 */
+  transform: scale(0.9); /* 🔥 Comienza más pequeño */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* 🔥 Hace que la animación sea más lenta */
+}
+
+/* 🔹 Contenido del Pop-Up */
+.popup-content {
+  font-family: "cardo bold";
+  background: #202020;
+  color: white;
+  border: 1px solid #c8a559;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Botón de cierre */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 50px;
+  cursor: pointer;
+  color: white;
+}
+
+/* 🔹 Clase para activar la animación de aparición */
+.popup.mostrar {
+  display: flex !important;
+  opacity: 1; /* 🔥 Hace que el pop-up aparezca con fade-in */
+  transform: scale(1); /* 🔥 Crece suavemente al tamaño original */
+}
+
+/* 🔹 Clase para la animación de desaparición */
+.popup.ocultar {
+  opacity: 0; /* 🔥 Hace que desaparezca con fade-out */
+  transform: scale(0.9); /* 🔥 Se encoge suavemente */
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* 🔥 Más lento */
+}
 

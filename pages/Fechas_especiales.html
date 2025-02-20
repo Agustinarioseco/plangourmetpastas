@@ -10,12 +10,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-</head>
+  </head>
 <body id="grilla">
   <header class="header">
     <nav class="navbar navbar-expand-lg">
@@ -42,38 +38,46 @@
       </div>
     </nav>
   </header>
-<!--main de inicio, contiene texto de bienvenida, carrusel de imagenes, lista de inicio-->
   <!-- 🔹 Sección Principal -->
   <main class="main fechas-especiales">
-    <section class="container">
-        <h1>🎉 Fechas Especiales y Descuentos 🎉</h1>
-        <p>¡Todos los meses celebramos las pastas con descuentos exclusivos! Anotá las fechas y no te las pierdas. 🍝</p>
-
+        <!--portada-->
+        <img src="../img/fechas-especiales.png" alt="Imagen destacada" class="imagen-full">
+        <!--titulos-->      
+        <div class="section-title">
+          <h2>Descubrí el mejor Plan para vos</h2>
+          <p>Explorá nuestras opciones y disfrutá de una experiencia gourmet única.</p>
+        </div>
         <!-- 🔹 Botón para Ver Descuentos del Día -->
         <div class="descuentos-link">
-            <a href="https://www.instagram.com/plangourmet" target="_blank" class="btn-descuentos">📅 Ver Descuentos del Día</a>
+            <a href="https://www.instagram.com/plangourmetpastas" target="_blank" class="btn-descuentos">📅 Ver Descuentos del Día</a>
         </div>
 
         <!-- 🔹 Bloques de Fechas Especiales -->
+         <div>
+          <h2>Nuestas Fechas Especiales</h2>
+         </div>
         <div class="fechas-grid">
-            <div class="fecha-item rojo">
-                <h2>🥟 8 de cada mes - Día del Sorrentino</h2>
-                <p>🎉 20% de descuento en sorrentinos.</p>
+            <div class="fecha-item">
+              <h1 class="ochos"> #8S </h1>
+                <h2>8 de cada mes - Sorrentinos</h2>
+                <p>20% de descuento en variedades destacadas de sorrentinos.</p>
             </div>
 
-            <div class="fecha-item bandera-italia">
-                <h2>🍝 11 de cada mes - Día del Fideo</h2>
-                <p>🇮🇹 Celebramos con sabores italianos y promos especiales.</p>
+            <div class="fecha-item">
+              <h1 class="oncef"> #11F </h1>
+                <h2>11 de cada mes - Fideos</h2>
+                <p>20% de descuento en todas nuestras variedades de fideos.</p>
+            </div>
+            <div class="fecha-item">
+              <h1 class="veinter" > #20R </h1>
+                <h2>20 de cada mes - Raviolones</h2>
+                <p>20% de descuento en variedades destacadas de raviolones.</p>
             </div>
 
-            <div class="fecha-item amarillo">
-                <h2>🟡 20 de cada mes - Día del Raviolón</h2>
-                <p>🌟 Raviolones artesanales con descuentos únicos.</p>
-            </div>
-
-            <div class="fecha-item naranja">
-                <h2>🟠 29 de cada mes - Día de la Lasaña</h2>
-                <p>🍽️ Disfrutá de lasañas con promociones exclusivas.</p>
+            <div class="fecha-item">
+              <h1 class="veintinuevel"> #29L </h1>
+                <h2>29 de cada mes - Lasagna</h2>
+                <p>20% de descuento en nuestras variedades de lasagna.</p>
             </div>
         </div>
     </section>
@@ -91,9 +95,10 @@
       <div class="footer-links">
         <ul>
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./pages/quienes_somos.html">¿Quiénes somos?</a></li>
-            <li><a href="./pages/Fechas_especiales.html">Fechas especiales</a></li>
-            <li><a href="./pages/Contacto.html">Contacto</a></li>
+            <li><a href="../pages/quienes_somos.html">¿Quiénes somos?</a></li>
+            <li><a href="../pages/nuestras-pastas">Nuestras pastas</a></li>
+            <li><a href="../pages/Fechas_especiales.html">Fechas especiales</a></li>
+            <li><a href="../pages/Contacto.html">Contacto</a></li>
         </ul>
     </div>
 
@@ -112,6 +117,6 @@
 </footer>
 
 
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
