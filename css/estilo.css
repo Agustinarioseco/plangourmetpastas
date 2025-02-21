@@ -1146,3 +1146,18 @@ main p {
       margin: 5px 0;
   }
 }
+@media (max-width: 700px) {
+  body {
+    font-family: "cardo regular", sans-serif !important;
+    background-color: #181818 !important;
+    color: white !important;
+  }
+
+  h1, h2, h3 {
+    font-family: "cardo bold", sans-serif !important;
+  }
+
+  .container {
+    padding: 10px !important;
+  }
+}
