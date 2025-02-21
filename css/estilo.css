@@ -976,7 +976,8 @@ ul, ol {
   color: #888;
 }
 .footer .footer-social ul li img{
-  width: 5%;
+  width: 20px; 
+  height:20px;
 }
 .footer .footer-social ul li{
   display: flex;
@@ -1167,7 +1168,9 @@ main p {
       margin: 5px 0;
   }
   .footer .footer-social ul li img{
-    width:10%;
+    width:20px;
+    height: 20px;
+    text-align: center;
   }
   .footer .footer-social ul li{
     display: flex;
