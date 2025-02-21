@@ -142,12 +142,13 @@ body {
 }
  
 .section-title h2{
+  color: #c8a559;
   font-family: "cardo ";
-  font-size: 35px;
+  font-size: 40px;
 }
 main .section-title p{
   font-size: 20px;
-  font-family: "cardo regular";
+  font-family: "cardo";
 }
 /* 🔹 Sección de Cards */
 .container {
@@ -1052,8 +1053,8 @@ ul, ol {
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* 🔥 Más lento */
 }
 
-/* 🔹 Para pantallas menores a 700px */
-@media (max-width: 700px) {
+/* 🔹 Para pantallas menores a 768px */
+@media (max-width: 800px) {
     
   /* 🔹 Ajustar el tamaño de los textos en general */
   body {
@@ -1159,5 +1160,121 @@ main p {
 
   .container {
     padding: 10px !important;
+  }
+}
+/* 🔹 ESTILOS PARA MÓVILES PEQUEÑOS (iPhone 12 y similares) */
+@media (max-width: 430px) {
+  body {
+    font-family: "cardo regular", sans-serif !important;
+    background-color: #181818 !important;
+    color: white !important;
+    font-size: 14px !important; /* 🔥 Reducimos el tamaño de fuente */
+  }
+
+  /* 🔹 Header y Navbar */
+  .navbar {
+    padding: 10px 15px !important;
+  }
+
+  .navbar-brand img {
+    width: 100px !important; /* 🔥 Tamaño del logo reducido */
+  }
+
+  .navbar-nav {
+    text-align: center !important;
+    font-size: 16px !important;
+  }
+
+  /* 🔹 Títulos principales */
+  h1, h2, h3 {
+    color: #c8a559;
+    font-size: 24px !important;
+    font-family: "cardo bold", sans-serif !important;
+  }
+  main .section-title p{
+    font-size: 16px;
+    font-family: "cardo";
+    text-align: center;
+    padding: 0px 10px;
+    width: 100%;
+  }
+  main .section-title h2{
+    padding: 0px 10px;
+  }
+  main .section-title{
+    align-items: center;
+  }
+
+
+  /* 🔹 Ajuste para las Cards */
+  .card {
+    width: 90% !important;
+    margin: 10px auto !important;
+  }
+
+  .card img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 🔹 Formularios y Inputs */
+  .form-contacto {
+    width: 95% !important;
+    margin: 20px auto !important;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea {
+    font-size: 14px !important;
+    padding: 10px !important;
+  }
+
+  /* 🔹 Footer más compacto */
+  .footer {
+    padding: 20px 10px !important;
+  }
+
+  .footer-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* 🔹 Popup responsive */
+  .popup {
+    width: 90% !important;
+    max-width: 320px !important;
+    padding: 15px !important;
+  }
+
+  .popup-content {
+    font-size: 14px !important;
+  }
+
+  /* 🔹 Sucursales y WhatsApp */
+  .info-contacto {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .info-item {
+    width: 90% !important;
+  }
+
+  /* 🔹 Nuestras Pastas */
+  .pastas-item {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .pastas-item .texto,
+  .pastas-item .imagen {
+    width: 100% !important;
+  }
+
+  /* 🔹 Fechas Especiales Cards */
+  .fechas-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 }
