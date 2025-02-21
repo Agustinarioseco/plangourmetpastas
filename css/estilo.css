@@ -523,7 +523,6 @@ a .whatsapp-icon {
 @media (max-width: 768px) {
   .imagen-portada{
     width: 100%;
-    margin-top: 40px;
   }
   .sobre-nosotros-item {
       flex-direction: column !important; /* 🔥 En mobile, todos se apilan */
@@ -745,6 +744,8 @@ a .whatsapp-icon {
 .imagen-portada {
   width: 100%;
   display: block;
+  height: auto;
+  padding-top:10px;
 }
 
 /* 🔹 TÍTULO DE CONTACTO */
@@ -977,6 +978,14 @@ ul, ol {
   font-size: 14px;
   color: #888;
 }
+.footer .footer-social ul li img{
+  width: 5%;
+}
+.footer .footer-social ul li{
+  display: flex;
+  height: 20px;
+  justify-content: center;
+}
 
 /* 🔹 RESPONSIVE: En pantallas pequeñas, centrar todo */
 @media (max-width: 768px) {
@@ -1052,6 +1061,17 @@ ul, ol {
   transform: scale(0.9); /* 🔥 Se encoge suavemente */
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* 🔥 Más lento */
 }
+@media (max-width: 1024px) {
+  .footer .footer-social ul li img{
+    width:20px;
+    height: 20px;
+    justify-items: flex-start;
+  }
+  .footer .footer-social ul li{
+    display: flex;
+    justify-content: center;
+  }
+}
 
 /* 🔹 Para pantallas menores a 768px */
 @media (max-width: 800px) {
@@ -1081,6 +1101,9 @@ main p {
   /* 🔹 Asegurar que los títulos sean más compactos */
   h1, h2 {
       font-size: 22px;
+  }
+  .sobre-nosotros p{
+    font-size: 16px;
   }
 
   /* 🔹 Ajustar el tamaño del pop-up */
@@ -1146,6 +1169,13 @@ main p {
       display: block;
       margin: 5px 0;
   }
+  .footer .footer-social ul li img{
+    width:10%;
+  }
+  .footer .footer-social ul li{
+    display: flex;
+    justify-content: center;
+  }
 }
 @media (max-width: 700px) {
   body {
@@ -1161,6 +1191,14 @@ main p {
   .container {
     padding: 10px !important;
   }
+
+  .footer .footer-social ul li img{
+    width:10%;
+  }
+  .footer .footer-social ul li{
+    display: flex;
+    justify-content: center;
+  }
 }
 /* 🔹 ESTILOS PARA MÓVILES PEQUEÑOS (iPhone 12 y similares) */
 @media (max-width: 430px) {
@@ -1173,7 +1211,7 @@ main p {
 
   /* 🔹 Header y Navbar */
   .navbar {
-    padding: 10px 15px !important;
+    padding: 0px 0px !important;
   }
 
   .navbar-brand img {
@@ -1204,7 +1242,9 @@ main p {
   main .section-title{
     align-items: center;
   }
-
+.section-title{
+  margin-top: 10px;
+}
 
   /* 🔹 Ajuste para las Cards */
   .card {
@@ -1231,7 +1271,7 @@ main p {
 
   /* 🔹 Footer más compacto */
   .footer {
-    padding: 20px 10px !important;
+    padding: 20px 10px 0px !important;
   }
 
   .footer-content {
@@ -1276,5 +1316,13 @@ main p {
   .fechas-grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
+  }
+
+  .footer .footer-social ul li img{
+    width:10%;
+  }
+  .footer .footer-social ul li{
+    display: flex;
+    justify-content: center;
   }
 }
