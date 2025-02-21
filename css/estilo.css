@@ -115,7 +115,7 @@ body {
       margin-bottom: 10px;
   }
  .imagen-full{
-  margin-top: 20px;
+  margin-top: 0px;
  }
 }
 
@@ -126,8 +126,8 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 30px;
 }
+
 /* ---------------------------------- */
 /* 🔹 ESTILOS PARA EL MAIN */
 /* ---------------------------------- */
@@ -1277,6 +1277,34 @@ justify-self: center;
     justify-items: center;
     justify-content: center;
     font-display: center;
+  }
+
+  .nuestras-pastas .section-title p{
+    font-size: 16px;
+    font-family: "cardo";
+  }
+
+  .pastas-item p{
+    font-family: "cardo";
+    font-size: 16px;
+  }
+  .pastas-item ul{
+    font-family: "cardo";
+    font-size: 14px;
+    width: 100%;
+  }
+  .pastas-item .imagen{
+    width: 100%;
+    padding: 0px 10px;
+    border-radius: 15px;
+  }
+
+ .fechas-especiales .section-title{
+    margin-top: 50px;
+  } 
+
+  .contacto .section-title{
+    margin-top: 50px;
   }
   /* 🔹 Formularios y Inputs */
  .form-contacto {
