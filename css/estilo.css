@@ -1262,18 +1262,22 @@ main p {
     height: auto !important;
   }
 
+  .sobre-nosotros-content .section-title p{
+    font-family: "cardo";
+  }
   main .sobre-nosotros .container{
 justify-content: center;
 justify-items: center;
 justify-self: center;
   }
   .sobre-nosotros-item .texto p{
+    font-family: "cardo";
     justify-items: center;
     justify-content: center;
     font-display: center;
-
+  }
   /* 🔹 Formularios y Inputs */
-  .form-contacto {
+ .form-contacto {
     width: 95% !important;
     margin: 20px auto !important;
   }
@@ -1340,5 +1344,4 @@ justify-self: center;
     display: flex;
     justify-content: center;
   }
-}
 }
