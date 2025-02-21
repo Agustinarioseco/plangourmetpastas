@@ -2,10 +2,6 @@
 /* 1️⃣ FUENTES Y RESETEO GENERAL */
 /* ---------------------------------- */
 @font-face {
-  font-family: "Bebas Neue";
-  src: url(../fonts/BebasNeue-Regular.ttf);
-}
-@font-face {
   font-family: "cardo bold";
   src: url(../fonts/Cardo/Cardo-Bold.ttf);
 }
@@ -1261,9 +1257,15 @@ main p {
     width: 100% !important;
     height: auto !important;
   }
+  .sobre-nosotros-item{
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 
-  .sobre-nosotros-content .section-title p{
-    font-family: "cardo";
+ .subtitulo{
+    font-family: "cardo regular";
+    font-style: normal;
+    font-size: 16px;
   }
   main .sobre-nosotros .container{
 justify-content: center;
