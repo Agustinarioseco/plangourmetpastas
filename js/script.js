@@ -55,10 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Definir los mensajes según el día
     let mensajesFechas = {
-        8: "🥟 ¡Hoy es el Día de los Sorrentinos! 20% de descuento en sorrentinos.",
-        11: "🍝 ¡Día de los Fideos! Celebramos con los colores de Italia.",
-        20: "Hoy es #20R, tenemos 20% de descuento en variedades selecionadas. ¡No te lo pierdas!",
-        29: "🟠 ¡Día de la Lasagna! Disfrutá el mejor sabor casero."
+        8: "Hoy es #8S, tenemos 20% de descuento en variedades selecionadas de sorrentinos. ¡No te lo pierdas!",
+        11: "Hoy es #11F, tenemos 20% de descuento en nuestraos fideos frescos. ¡No te lo pierdas!",
+        20: "Hoy es #20R, tenemos 20% de descuento en variedades selecionadas de raviolones. ¡No te lo pierdas!",
+        29: "Hoy es #29L, tenemos 20% de descuento en variedades selecionadas de lasagna. ¡No te lo pierdas!."
     };
 
     let popUpMostrado = false; // Para evitar que se muestre dos veces
