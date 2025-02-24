@@ -46,46 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    let hoy = new Date();
-    let dia = hoy.getDate();
-    let popup = document.getElementById("popupFechas");
-    let mensajePopup = document.getElementById("mensajeFechas");
-
-    // Definir los mensajes según el día
-    let mensajesFechas = {
-        8: "Hoy es #8S, tenemos 20% de descuento en variedades selecionadas de sorrentinos. ¡No te lo pierdas!",
-        11: "Hoy es #11F, tenemos 20% de descuento en nuestraos fideos frescos. ¡No te lo pierdas!",
-        20: "Hoy es #20R, tenemos 20% de descuento en variedades selecionadas de raviolones. ¡No te lo pierdas!",
-        29: "Hoy es #29L, tenemos 20% de descuento en variedades selecionadas de lasagna. ¡No te lo pierdas!."
-    };
-
-    let popUpMostrado = false; // Para evitar que se muestre dos veces
-
-    // Función para mostrar el Pop-Up con animación
-    function mostrarPopup() {
-        if (!popUpMostrado && mensajesFechas[dia] && popup) {
-            mensajePopup.innerText = mensajesFechas[dia];
-            popup.style.display = "flex"; // Primero, se muestra
-            setTimeout(() => {
-                popup.classList.add("mostrar"); // Luego, activa la animación de fade-in suave
-            }, 50);
-            popUpMostrado = true; // Evita que vuelva a mostrarse
-        }
-    }
-
-    // Espera 5 segundos antes de mostrar el popup
-    setTimeout(mostrarPopup, 5000);
-
-    // Opción 2: Mostrar el Pop-Up cuando el usuario scrollea
-    window.addEventListener("scroll", function () {
-        if (!popUpMostrado) {
-            mostrarPopup();
-        }
-    });
-});
-
 // Función para cerrar el Pop-Up con fade-out más lento
 function cerrarPopup() {
     let popup = document.getElementById("popupFechas");
@@ -99,8 +59,6 @@ function cerrarPopup() {
         }, 1500);
     }
 }
-
-
 document.getElementById("contactoForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evita la recarga de la página
 
@@ -122,3 +80,18 @@ document.getElementById("contactoForm").addEventListener("submit", function(even
     })
     .catch(error => console.error("Error en el envío:", error));
 });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    const scrollAmount = 300; // Cuánto se mueve cada vez
+
+    nextBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  });

@@ -539,80 +539,64 @@ a .whatsapp-icon {
 }
 
 /* 🔹 -----------------------SECCIÓN "NUESTRAS PASTAS" -------------------------------*/
+/* Estilo general de la sección de carrusel */
+
 .nuestras-pastas {
-  background-color: #252525;
+  padding: 40px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  min-width: 250px;
+  background: #1e1e1e;
+  border: 2px solid #c5a253;
+  border-radius: 12px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #c5a253;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
   color: white;
 }
-.nuestras-pastas .section-title h2{
-  color: #c8a559;
-  font-family: "cardo bold";
-  font-size: 36px;
+
+.prev {
+  left: 0;
 }
 
-.nuestras-pastas .section-title p{
-  color: #f5f5f5;
-  font-size: 20px;
-  font-family: "cardo regular";
-}
-/* Contenedor General */
-.pastas-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: nowrap;
-  margin-bottom: 50px;
-  margin-top: 50px;
+.next {
+  right: 0;
 }
 
-.pastas-item .texto h2{
-  font-size: 36px;
-  font-family: "cardo bold";
-  color: #c8a559;
-}
-
-/* Imagen */
-.pastas-item .imagen {
-  width: 50%;
-  max-width: 500px;
-}
-
-.pastas-item .imagen img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Texto */
-.pastas-item .texto {
-  font-family: "cardo regular";
-  font-size: 20px;
-  width: 50%;
-  max-width: 500px;
-}
-
-/* Alternar lados */
-.pastas-item.izquierda {
-  flex-direction: row;
-}
-
-.pastas-item.derecha {
-  flex-direction: row-reverse;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .pastas-item {
-      flex-direction: column !important;
-      text-align: center;
-      align-items: center;
-  }
-  .pastas-item .texto,
-  .pastas-item .imagen {
-      width: 100%;
+  .card {
+    min-width: 180px;
   }
 }
-
 /* -----------------🔹 SECCIÓN FECHAS ESPECIALES ----------------------------*/
 /* 🔹 SECCIÓN FECHAS ESPECIALES */
 .fechas-especiales {
@@ -1380,3 +1364,123 @@ justify-self: center;
     justify-content: center;
   }
 }
+
+/* 🔹 Estilo general del popup */
+#promo-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 🔹 Contenido del popup */
+#promo-popup .popup-content {
+  background: white;
+  display: flex;
+  width: 600px;
+  max-width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Sección de texto */
+#promo-popup .popup-text {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#promo-popup .popup-text h2 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 10px;
+  font-family: "Cardo Bold", sans-serif;
+}
+
+#promo-popup .popup-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+  font-family: "Cardo Regular", sans-serif;
+}
+
+/* 🔹 Botón de la promoción */
+#promo-popup .promo-button {
+  padding: 10px 20px;
+  background-color: #c8a559;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#promo-popup .promo-button:hover {
+  background-color: #d4ae42;
+  color: black;
+}
+
+/* 🔹 Sección de la imagen */
+#promo-popup .popup-image {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contenedor del popup para asegurar posición relativa */
+#promo-popup .popup-content {
+  position: relative; /* Esto es clave para que el botón se posicione relativo al contenedor */
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cerrar dentro del rectángulo */
+#promo-popup .close-button {
+  position: absolute;  /* Ubicación relativa al contenedor */
+  top: 10px;         /* 10px desde arriba */
+  right: 10px;         /* 10px desde la derecha */
+  background: none;
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;     /* Asegura que esté por encima de otros elementos */
+}
+
+
+
+@media (max-width: 768px) {
+  #promo-popup .popup-content {
+    flex-direction: column;
+  }
+
+  #promo-popup .popup-text, 
+  #promo-popup .popup-image {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según necesidad */
+  }
+
+  #promo-popup .popup-image {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+

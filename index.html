@@ -166,14 +166,49 @@
       </div>
   </div>
 </div>
-<!-- 🔥 Pop-Up Automático -->
-<div id="popupFechas" class="popup">
+  <!-- 🔥 POP-UP DE PROMOCIÓN -->
+  <div id="promo-popup">
     <div class="popup-content">
-        <span class="popup-close" onclick="cerrarPopup()">&times;</span>
-        <h2>¡Hoy es un día especial! 🎉</h2>
-        <p id="mensajeFechas"></p>
+      <button class="close-button" onclick="closePopup()">×</button>
+      <div class="popup-text">
+        <h2>¡Promoción Especial!</h2>
+        <p>¡El #29 de lasagna se pasa al 1 de marzo! No te pierdas esta deliciosa oportunidad.</p>
+        <a href="https://www.canva.com/tu-link-de-promociones" class="promo-button" target="_blank">Ver Promoción</a>
+      </div>
+      <div class="popup-image" style="background-image: url('./img/lasagna.png');"></div>
     </div>
-</div>
-    <script src="./js/script.js"></script>
+  </div>
+  <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fechaActual = new Date();
+      const dia = fechaActual.getDate(); // Día del mes
+      const mes = fechaActual.getMonth() + 1; // Mes (0 = Enero, por eso sumamos 1)
+
+      // ✅ Días específicos para mostrar el pop-up
+      const diasEspecificos = [
+        { dia: 24, mes: 2 },  // 1 de marzo
+        { dia: 29, mes: 2 }, // 29 de febrero
+        { dia: 15, mes: 4 }  // 15 de abril
+      ];
+
+      // ✅ Mostrar pop-up siempre para pruebas
+      const modoPrueba = false; // Cambiar a false cuando quieras que solo aparezca en fechas específicas
+
+      // ✅ Verifica si la fecha actual coincide o está en modo prueba
+      const mostrarPopup = modoPrueba || diasEspecificos.some(fecha => fecha.dia === dia && fecha.mes === mes);
+
+      if (mostrarPopup) {
+        setTimeout(() => {
+          document.getElementById('promo-popup').style.display = 'flex';
+        }, 1000); // Espera 1 segundo antes de mostrarlo
+      }
+    });
+    // ✅ Cerrar el pop-up
+    function closePopup() {
+      document.getElementById('promo-popup').style.display = 'none';
+    }
+  </script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
