@@ -541,68 +541,61 @@ a .whatsapp-icon {
 /* 🔹 -----------------------SECCIÓN "NUESTRAS PASTAS" -------------------------------*/
 /* Estilo general de la sección de carrusel */
 
-.nuestras-pastas {
-  padding: 40px;
+.carousel-section {
   text-align: center;
+  color: white;
 }
 
 .carousel-container {
   position: relative;
   overflow: hidden;
-}
-
-.carousel-wrapper {
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .carousel {
   display: flex;
-  gap: 20px;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  scrollbar-width: none; /* Firefox */
 }
 
-.card {
-  min-width: 250px;
-  background: #1e1e1e;
-  border: 2px solid #c5a253;
-  border-radius: 12px;
-  color: white;
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.carousel-card {
+  background-color: #1c1c1c;
+  color: #d4af37;
   padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #c5a253;
+  background-color: #d4af37;
+  color: black;
   border: none;
   padding: 10px;
   cursor: pointer;
-  font-size: 24px;
-  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
 }
 
-.prev {
-  left: 0;
+.carousel-btn.left {
+  left: 10px;
 }
 
-.next {
-  right: 0;
-}
-
-@media (max-width: 768px) {
-  .card {
-    min-width: 180px;
-  }
-}
-/* -----------------🔹 SECCIÓN FECHAS ESPECIALES ----------------------------*/
-/* 🔹 SECCIÓN FECHAS ESPECIALES */
-.fechas-especiales {
-  background-color: #252525;
-  color: white;
-  text-align: center;
+.carousel-btn.right {
+  right: 10px;
 }
 
 /* 🔹 Contenedor general del botón de descuentos */

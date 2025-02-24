@@ -48,38 +48,36 @@
     <img class="imagen-portada" src="../img/nuestras-pastas.png" alt="">
   <!-- Sección de Nuestras Pastas -->
 <!-- HTML: Carrusel de Pastas -->
-<section class="nuestras-pastas">
-  <h2>Nuestras Pastas</h2>
-  <div class="carousel-container">
-    <button class="carousel-btn prev">&#10094;</button>
-    <div class="carousel-wrapper">
-      <div class="carousel">
-        <div class="card">Sorrentinos</div>
-        <div class="card">Raviolones</div>
-        <div class="card">Tagliatelle</div>
-        <div class="card">Dopios</div>
-        <div class="card">Pappardelle</div>
-        <div class="card">Canelones</div>
-        <div class="card">Gnocchi</div>
-      </div>
+<div class="carousel-container">
+  <h2 class="section-title">Nuestras Pastas</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev">&#10094;</button> <!-- Flecha izquierda -->
+    <div class="carousel" id="carousel">
+      <div class="card">Sorrentinos</div>
+      <div class="card">Raviolones</div>
+      <div class="card">Tagliatelle</div>
+      <div class="card">Dopios</div>
+      <div class="card">Pappardelle</div>
+      <div class="card">Canelones</div>
     </div>
-    <button class="carousel-btn next">&#10095;</button>
+    <button class="carousel-btn next">&#10095;</button> <!-- Flecha derecha -->
   </div>
-</section>
-<!-- JS: Carrusel funcional -->
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-    const scrollAmount = 300; // Cuánto se mueve cada vez
+    const carousel = document.getElementById('carousel');
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
 
-    nextBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    // Scroll a la derecha
+    nextButton.addEventListener('click', () => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
     });
 
-    prevBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    // Scroll a la izquierda
+    prevButton.addEventListener('click', () => {
+      carousel.scrollBy({ left: -300, behavior: 'smooth' });
     });
   });
 </script>
