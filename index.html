@@ -208,6 +208,22 @@
     function closePopup() {
       document.getElementById('promo-popup').style.display = 'none';
     }
+    // Mostrar el pop-up después de que se cargue toda la página
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById('promo-popup').style.display = 'flex';
+  }, 2000); // Aparece 2 segundos después de que todo cargue
+};
+// Mostrar el pop-up al hacer scroll por primera vez
+let popupShown = false;
+
+window.addEventListener('scroll', () => {
+  if (!popupShown) {
+    document.getElementById('promo-popup').style.display = 'flex';
+    popupShown = true; // Evita que aparezca más de una vez
+  }
+});
+
   </script>
   <script src="./js/script.js"></script>
 </body>
