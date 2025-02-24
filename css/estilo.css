@@ -597,16 +597,19 @@ a .whatsapp-icon {
 /* Contenedor general */
 /* Contenedor general */
 .cooking-section {
+  font-family: "cardo bold";
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 20px;
   background-color: #1e1e1e;
   border-radius: 15px;
+  color: #c8a559;
 }
 
 /* Card general */
 .cooking-card {
+  font-family: "cardo bold";
   display: flex;
   align-items: center;
   background-color: #222;
@@ -644,11 +647,13 @@ a .whatsapp-icon {
 .cooking-card h3 {
   color: #d4af37;
   margin-bottom: 10px;
+  font-size: 30px;
 }
 
 .cooking-card p {
+  font-family: "cardo regular";
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 /* Botón */
@@ -1578,14 +1583,15 @@ justify-self: center;
 /* Botón de cerrar dentro del rectángulo */
 #promo-popup .close-button {
   position: absolute;  /* Ubicación relativa al contenedor */
-  top: 10px;         /* 10px desde arriba */
+  top: 0px;         /* 10px desde arriba */
   right: 10px;         /* 10px desde la derecha */
   background: none;
   border: none;
   font-size: 32px;
   font-weight: bold;
   cursor: pointer;
-  color: #333;     /* Asegura que esté por encima de otros elementos */
+  color: #ffffff;    
+  margin: 0px; /* Asegura que esté por encima de otros elementos */
 }
 
 
@@ -1611,21 +1617,20 @@ justify-self: center;
 @media (max-width: 430px) {
   #promo-popup .popup-content {
     flex-direction: column;
-    margin:20px;
+    margin:0px 20px;
   }
 
   #promo-popup .popup-text, 
   #promo-popup .popup-image {
     width: 100%;
-    height: auto; /* Ajusta la altura según necesidad */
+    height: 200px; /* Ajusta la altura según necesidad */
   }
 
   #promo-popup .popup-image {
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+    width: 0;
+    height: 0;
   }
 }
 
