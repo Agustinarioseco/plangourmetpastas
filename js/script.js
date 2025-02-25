@@ -46,19 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-// Función para cerrar el Pop-Up con fade-out más lento
-function cerrarPopup() {
-    let popup = document.getElementById("popupFechas");
-    if (popup) {
-        popup.classList.add("ocultar"); // Agrega la animación de salida
-
-        // Espera que termine la animación antes de ocultarlo
-        setTimeout(() => {
-            popup.style.display = "none";
-            popup.classList.remove("mostrar", "ocultar"); // Elimina las clases para reutilizar la animación
-        }, 1500);
-    }
-}
 document.getElementById("contactoForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evita la recarga de la página
 
@@ -95,3 +82,22 @@ document.getElementById("contactoForm").addEventListener("submit", function(even
       carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
   });
+
+
+  // Mostrar el pop-up solo en la fecha específica al hacer scroll
+document.addEventListener("DOMContentLoaded", () => {
+    const today = new Date().toISOString().split("T")[0]; // Formato YYYY-MM-DD
+    const popupDate = "2024-03-01"; // Cambiar por la fecha deseada
+  
+    if (today === popupDate) {
+      let popupShown = false; // Evita mostrar el popup múltiples veces
+  
+      window.addEventListener("scroll", () => {
+        if (!popupShown) {
+          document.getElementById("promo-popup").style.display = "flex";
+          popupShown = true;
+        }
+      });
+    }
+  });
+  
