@@ -542,7 +542,7 @@ a .whatsapp-icon {
 /* Estilo general de la sección de carrusel */
 
 .carousel-container {
-  padding: 40px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -571,19 +571,19 @@ a .whatsapp-icon {
 }
 
 .card {
-  min-width: 200px;
+  min-width: 250px;
   background: #1e1e1e;
-  border: 2px solid #d4af37;
-  padding: 20px;
+  border: 2px solid #c8a559;
+  padding: 10px;
   color: white;
   text-align: center;
   border-radius: 10px;
 }
 
 .carousel-btn {
-  background-color: #d4af37;
+  background-color: #c8a559;
   border: none;
-  padding: 10px;
+  padding: 5px;
   color: white;
   font-size: 24px;
   cursor: pointer;
@@ -594,135 +594,105 @@ a .whatsapp-icon {
   background-color: #b58c2b;
 }
 /* Contenedor general de la sección */
-/* Contenedor general */
-/* Contenedor general */
+/* Estilo general de la sección */
 .cooking-section {
-  font-family: "cardo bold";
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
   padding: 20px;
-  background-color: #1e1e1e;
-  border-radius: 15px;
+  text-align: center;
+  font-family: "cardo";
+}
+
+.cooking-section h2 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Contenedor de cards */
+.cooking-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Celular por defecto */
+  gap: 20px;
+}
+
+/* Estilo general de las cards */
+.cooking-card {
+  background-color: #1f1f1f;
+  border: 1px solid #c8a559;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  font-family: "cardo";
+}
+
+.cooking-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen dentro de la card */
+.cooking-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 20px;
+  text-align: left;
+  font-family: "cardo bold";
+}
+
+.card-text h3 {
+  margin-bottom: 5px;
   color: #c8a559;
 }
 
-/* Card general */
-.cooking-card {
-  font-family: "cardo bold";
-  display: flex;
-  align-items: center;
-  background-color: #222;
-  border: 1px solid #d4af37;
-  border-radius: 15px;
-  padding: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  max-width: 900px;  /* Ancho máximo para ambas cards */
-  width: 100%;
-  margin: 0 auto;  /* Centrar horizontalmente */
-  min-height: 300px; /* Altura mínima uniforme */
+.card-text p {
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
-/* Imagen */
-.cooking-card img {
-  width: 50%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
+.card-text button {
+  background-color: #c8a559;
+  color: #1f1f1f;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cooking-card button:hover{
+  background-color: #b58c2b;
 }
 
-/* Contenido de texto */
-.cooking-card .content {
-  width: 50%;
-  padding: 20px;
-  color: #fff;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+/* Media Queries Responsivos */
 
-/* Título y descripción */
-.cooking-card h3 {
-  color: #d4af37;
-  margin-bottom: 10px;
-  font-size: 30px;
-}
-
-.cooking-card p {
-  font-family: "cardo regular";
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-/* Botón */
-.cooking-card .btn {
-  background-color: #d4af37;
-  color: #1e1e1e;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  align-self: flex-start;
-}
-
-/* Alternar la disposición para la segunda card */
-.cooking-card:nth-child(2) {
-  flex-direction: row-reverse;
-}
-
-/* Diseño Responsive */
-
-/* Tablets (ancho máximo de 768px) */
-@media (max-width: 768px) {
-  .cooking-card {
-    flex-direction: column; /* Imagen arriba, texto abajo */
-    align-items: center;
-    min-height: auto; /* Eliminar altura mínima para adaptarse mejor */
+/* Tablets: 2 columnas */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .cooking-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .cooking-card img {
-    width: 100%; /* Imagen ocupa todo el ancho */
-    height: auto; /* Mantener la proporción */
-    margin-bottom: 15px;
+    height: 250px;
+  }
+}
+
+/* Desktop: 4 columnas con cards verticales */
+@media (min-width: 1024px) {
+  .cooking-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .cooking-card .content {
-    width: 100%;
+  .cooking-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cooking-card img {
+    height: 250px;
+  }
+
+  .card-text {
     text-align: center;
-  }
-
-  .cooking-card:nth-child(2) {
-    flex-direction: column; /* También para la segunda card */
-  }
-}
-
-/* Celulares pequeños (ancho máximo de 480px) */
-@media (max-width: 480px) {
-  .cooking-card {
-    padding: 15px;
-  }
-
-  .cooking-card img {
-    height: 200px; /* Imagen más pequeña */
-  }
-
-  .cooking-card .content {
-    padding: 10px;
-  }
-
-  .cooking-card h3 {
-    font-size: 18px; /* Tamaño de texto ajustado */
-  }
-
-  .cooking-card p {
-    font-size: 14px;
-  }
-
-  .cooking-card .btn {
-    padding: 8px 16px;
-    font-size: 14px;
   }
 }
 
