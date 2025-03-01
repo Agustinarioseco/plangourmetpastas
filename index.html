@@ -180,41 +180,28 @@
   </div>
   <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const fechaActual = new Date();
-      const dia = fechaActual.getDate(); // Día del mes
-      const mes = fechaActual.getMonth() + 1; // Mes (0 = Enero, por eso sumamos 1)
+    document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date().toISOString().split("T")[0]; // Obtiene la fecha actual en formato YYYY-MM-DD
+  const popupDate = "2025-03-01"; // Fecha en la que debe aparecer el pop-up
 
-      // ✅ Días específicos para mostrar el pop-up
-      const diasEspecificos = [
-        { dia: 1, mes: 3 }  // previa al 29L
-      ];
+  let lastShownDate = localStorage.getItem("lastPopupDate");
 
-      // ✅ Mostrar pop-up siempre para pruebas
-      const modoPrueba = false; // Cambiar a false cuando quieras que solo aparezca en fechas específicas
+  // Si hoy es la fecha del pop-up y no ha sido mostrado hoy, lo activamos
+  if (today === popupDate && lastShownDate !== today) {
+    const showPopupOnScroll = () => {
+      document.getElementById("promo-popup").style.display = "flex";
+      localStorage.setItem("lastPopupDate", today); // Guarda la fecha para evitar que se repita en el mismo día
+      window.removeEventListener("scroll", showPopupOnScroll);
+    };
 
-      // ✅ Verifica si la fecha actual coincide o está en modo prueba
-      const mostrarPopup = modoPrueba || diasEspecificos.some(fecha => fecha.dia === dia && fecha.mes === mes);
-
-      if (mostrarPopup) {
-        setTimeout(() => {
-          document.getElementById('promo-popup').style.display = 'flex';
-        }, 5000); // Espera 1 segundo antes de mostrarlo
-      }
-    });
-    // ✅ Cerrar el pop-up
-    function closePopup() {
-      document.getElementById('promo-popup').style.display = 'none';
-    }
-// Mostrar el pop-up al hacer scroll por primera vez
-let popupShown = false;
-
-window.addEventListener('scroll', () => {
-  if (!popupShown) {
-    document.getElementById('promo-popup').style.display = 'flex';
-    popupShown = true; // Evita que aparezca más de una vez
+    window.addEventListener("scroll", showPopupOnScroll);
   }
 });
+
+// Función para cerrar el pop-up
+function closePopup() {
+  document.getElementById("promo-popup").style.display = "none";
+}
 
   </script>
   <script src="./js/script.js"></script>

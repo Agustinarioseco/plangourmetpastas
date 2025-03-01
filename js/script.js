@@ -67,37 +67,3 @@ document.getElementById("contactoForm").addEventListener("submit", function(even
     })
     .catch(error => console.error("Error en el envío:", error));
 });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-    const scrollAmount = 300; // Cuánto se mueve cada vez
-
-    nextBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-
-    prevBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-  });
-
-
-  // Mostrar el pop-up solo en la fecha específica al hacer scroll
-document.addEventListener("DOMContentLoaded", () => {
-    const today = new Date().toISOString().split("T")[0]; // Formato YYYY-MM-DD
-    const popupDate = "2024-03-01"; // Cambiar por la fecha deseada
-  
-    if (today === popupDate) {
-      let popupShown = false; // Evita mostrar el popup múltiples veces
-  
-      window.addEventListener("scroll", () => {
-        if (!popupShown) {
-          document.getElementById("promo-popup").style.display = "flex";
-          popupShown = true;
-        }
-      });
-    }
-  });
-  
