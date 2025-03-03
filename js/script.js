@@ -66,4 +66,12 @@ document.getElementById("contactoForm").addEventListener("submit", function(even
         }
     })
     .catch(error => console.error("Error en el envío:", error));
+    const formulario = document.getElementById("contactoForm");
+if (formulario) {
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita la recarga de la página
+        new FormData(this);
+    });
+}
+
 });

@@ -169,39 +169,52 @@
   <!-- 🔥 POP-UP DE PROMOCIÓN -->
   <div id="promo-popup">
     <div class="popup-content">
-      <button class="close-button" onclick="closePopup()">×</button>
+      <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
       <div class="popup-text">
         <h2>¡Seguimos con nuestro #29L!</h2>
-        <p>Aunque febrero nos dejo sin 29, lo hicimos igual <br> <strong>Aprovechá el 20 OFF en nuestras variedades de Lasagnas</strong></p>
+        <p>Extendimos nuestro falso 29 de lasagna<br>Aprovecha nuestras variedades con 20% OF </p>
         <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ/view?utm_content=DAGgabGMsKs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5b301f4466" class="promo-button" target="_blank">Ver variedades</a>
       </div>
-      <div class="popup-image" style="background-image: url('./img/LASAGNA\ BOLOGNESA.png');"></div>
+      <div class="popup-image" style="background-image: url('./img/LASAGNA-BOLOGNESA.png');"></div>
     </div>
   </div>
   <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const today = new Date().toISOString().split("T")[0]; // Obtiene la fecha actual en formato YYYY-MM-DD
-  const popupDate = "2025-03-03"; // Fecha en la que debe aparecer el pop-up
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("promo-popup");
+    const closeButton = document.getElementById("close-popup");
 
-  let lastShownDate = localStorage.getItem("lastPopupDate");
+    if (!popup || !closeButton) {
+        console.error("Error: No se encontró el pop-up o el botón de cierre.");
+        return;
+    }
 
-  // Si hoy es la fecha del pop-up y no ha sido mostrado hoy, lo activamos
-  if (today === popupDate && lastShownDate !== today) {
-    const showPopupOnScroll = () => {
-      document.getElementById("promo-popup").style.display = "flex";
-      localStorage.setItem("lastPopupDate", today); // Guarda la fecha para evitar que se repita en el mismo día
-      window.removeEventListener("scroll", showPopupOnScroll);
-    };
+    // Obtiene la fecha de hoy en formato YYYY-MM-DD
+    const fechaHoy = new Date().toISOString().split("T")[0];
 
-    window.addEventListener("scroll", showPopupOnScroll);
-  }
+    // Verifica si ya se mostró el pop-up en la fecha actual
+    const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
+
+    // Lista de fechas habilitadas para mostrar el pop-up
+    const fechasHabilitadas = ["2025-03-03", "2025-03-15", "2025-03-29"];
+
+    // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
+    const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
+    const ultimoAnuncioMostrado = localStorage.getItem("ultimoAnuncioMostrado");
+
+    if (fechasHabilitadas.includes(fechaHoy) && (ultimaFechaPopup !== fechaHoy || ultimoAnuncioMostrado !== anuncioActual)) {
+        setTimeout(() => {
+            popup.style.display = "flex";
+            localStorage.setItem("ultimaFechaPopup", fechaHoy);
+            localStorage.setItem("ultimoAnuncioMostrado", anuncioActual);
+        }, 1500); // El pop-up se muestra 1.5 segundos después de cargar la página
+    }
+
+    // ✅ Al hacer clic en el botón de cierre, oculta el pop-up
+    closeButton.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
 });
-
-// Función para cerrar el pop-up
-function closePopup() {
-  document.getElementById("promo-popup").style.display = "none";
-}
 
   </script>
   <script src="./js/script.js"></script>
