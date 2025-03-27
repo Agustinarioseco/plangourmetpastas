@@ -197,11 +197,11 @@
     <div class="popup-content">
       <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
       <div class="popup-text">
-        <h2>Día de la espinaca</h2>
-        <p>"10% OFF en todos nuestros productos con espinaca"<br>¿Te lo vas a perder?</p>
+        <h2>Día del queso</h2>
+        <p>"10% OFF en productos selecionados con queso"<br>¿Te lo vas a perder?</p>
         <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ/view?utm_content=DAGgabGMsKs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5b301f4466" class="promo-button" target="_blank">Ver variedades</a>
       </div>
-      <div class="popup-image" style="background-image: url(./img/dia-espinaca.png);"></div>
+      <div class="popup-image" style="background-image: url(./img/dia-queso.png);"></div>
     </div>
   </div>
   <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
 
     // Lista de fechas habilitadas para mostrar el pop-up
-    const fechasHabilitadas = ["2025-03-26", "2025-03-28", "2025-03-29"];
+    const fechasHabilitadas = ["2025-03-27", "2025-03-28", "2025-03-29"];
 
     // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
     const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
