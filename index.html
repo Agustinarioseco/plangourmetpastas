@@ -53,6 +53,31 @@
   <h2>Descubrí el mejor Plan Gourmet para vos</h2>
   <p>Explorá nuestras opciones y disfrutá de una experiencia gourmet única.</p>
 </div>
+<!-- Botón para abrir el pop-up -->
+<button class="btn-destacadoPG" onclick="mostrarPopupDestacadoPG()">PRODUCTO DESTACADO DE LA SEMANA</button>
+
+<!-- Pop-up del producto destacado -->
+<div id="popupDestacadoPG" class="popupDestacadoPG">
+  <div class="popup-contenidoPG">
+    <span class="cerrarPG" onclick="cerrarPopupDestacadoPG()">&times;</span>
+    <div class="popup-bodyPG">
+      <div class="popup-textoPG">
+        <h3>Cerdo Düsseldorf</h3>
+        <p class="introPG">Un relleno inspirado en la cocina alemana: sabroso, reconfortante y completamente innovador.</p>
+        <p><strong>Ingredientes:</strong> Cerdo braseado, mostaza de dijon, cebollas caramelizadas, vino blanco y un toque de romero fresco.</p>
+        <p><strong>Ideal para acompañar con:</strong> Salsa de mostaza suave y crema, parmesano rallado y una copa de cerveza rubia bien fría.</p>
+      </div>
+      <div class="popup-imagenPG">
+        <img src="./img/raviolones-cerdo-d.png" alt="Cerdo Düsseldorf">
+      </div>
+    </div>
+    <div class="botones-popupPG">
+      <a href="./pages/Contacto.html" class="boton-secundarioPG">Ver sucursales</a>
+      <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-belgrano-85fd80de-6c7e-4eca-9bad-051342083f06-menu?search=plan%20gourmet" target="_blank" class="boton-principalPG">Pedir en PedidosYa</a>
+    </div>
+  </div>
+</div>
+
 <!-- 🔹 Sección de Cards -->
 <div class="container">
   <!-- Card 1: Menú Digital -->
@@ -197,11 +222,11 @@
     <div class="popup-content">
       <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
       <div class="popup-text">
-        <h2>¡Día de la Mousse!</h2>
-        <p>"En un día tan especial no podían faltar <br> nuestros postres"<br>¡Vení a elegir tu <br> mousse favorita!</p>
+        <h2>¡Día del Tomate!</h2>
+        <p>"El domingo 6/4 lo festejamos con 10% OFF en productos seleccionados"<br> ¡No Te lo Pierdas! </p>
         <a href="https://www.canva.com/design/DAGfvYK4ul0/dnsRm0cXNslN92DpQNef1g/view?utm_content=DAGfvYK4ul0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb1ca79726c" class="promo-button" target="_blank">Ver Novedades</a>
       </div>
-      <div class="popup-image" style="background-image: url(./img/mousse.png);"></div>
+      <div class="popup-image" style="background-image: url(./img/Tommate.png);"></div>
     </div>
   </div>
   <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
@@ -222,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
 
     // Lista de fechas habilitadas para mostrar el pop-up
-    const fechasHabilitadas = ["2025-04-03", "2025-04-04", "2025-03-29"];
+    const fechasHabilitadas = ["2025-04-04", "2025-04-05", "2025-04-06"];
 
     // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
     const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
@@ -243,6 +268,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
   </script>
+  <script>
+  function mostrarPopupDestacadoPG() {
+    document.getElementById("popupDestacadoPG").style.display = "block";
+  }
+
+  function cerrarPopupDestacadoPG() {
+    document.getElementById("popupDestacadoPG").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const popup = document.getElementById("popupDestacadoPG");
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  }
+</script>
   <script src="./js/script.js"></script>
 </body>
 </html>

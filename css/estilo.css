@@ -1604,51 +1604,231 @@ justify-self: center;
   }
 }
 
-/* 🔥 ESTILOS PARA EL POP-UP */
-.popup {
-  display: none; /* Oculto por defecto */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
 
-.popup-content {
-  background: #1c1c1c;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
 
-.pedidosya-list {
-  list-style: none;
-  padding: 0;
-}
+/*------------------ POP UP PRODUCTOS --------------------*/
 
-.pedidosya-list li {
-  background: #292929;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  font-weight: bold;
-  color: white;
-}
-
-.close-button {
-  background: none;
+/* Botón */
+.btn-destacadoPG {
+  background-color: #D4AE42;
+  color: #111;
+  padding: 1rem 2rem;
   border: none;
-  font-size: 24px;
+  border-radius: 2rem;
+  font-size: 1rem;
   cursor: pointer;
+  font-family: "cardo bold";
+  transition: background-color 0.3s ease;
+  margin: 2rem auto;
+  display: block;
+}
+
+.btn-destacadoPG:hover {
+  background-color: #b58c2b;
+}
+
+/* Fondo del pop-up */
+.popupDestacadoPG {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+}
+
+/* Contenido general */
+.popup-contenidoPG {
+  background-color: #fff;
+  margin: 5% auto;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  max-width: 900px;
+  width: 90%;
+  font-family: "CARDO REGULAR";
+}
+
+/* Cerrar */
+.cerrarPG {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
+  top: 5PX ;
+  right: 15PX;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Cuerpo dividido */
+.popup-bodyPG {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Texto */
+.popup-textoPG {
+  flex: 1;
+}
+
+.popup-textoPG h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #D4AE42;
+  font-family: "cardo bold";
+}
+
+.popup-textoPG .introPG {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #000;
+  font-family: "cardo bold";
+  font-size: 18px;
+}
+
+.popup-textoPG p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Imagen */
+.popup-imagenPG {
+  flex: 1;
+  text-align: center;
+}
+
+.popup-imagenPG img {
+  width: 100%;
+  border-radius: 1rem;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Botones */
+.botones-popupPG {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boton-principalPG, .boton-secundarioPG {
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "cardo bold";
+}
+
+.boton-principalPG {
+  background-color: #D69E06;
+  color: #fff;
+}
+
+.boton-secundarioPG {
+  background-color: #E0E1DB;
+  color: #111;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .popup-contenidoPG {
+    margin: 10% 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .popup-bodyPG {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0PX
+    ;
+  }
+
+  .popup-textoPG {
+    order: 1;
+    width: 100%;
+  }
+
+  .popup-textoPG h3 {
+    font-size: 1.6rem;
+  }
+
+  .popup-textoPG .introPG {
+    font-size: 1rem;
+  }
+
+  .popup-imagenPG {
+    order: 2;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .popup-imagenPG img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+
+  .botones-popupPG {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .boton-principalPG,
+  .boton-secundarioPG {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+@media (min-width: 769px) {
+  .boton-producto-semana {
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .boton-producto-semana {
+    width: 90%;
+    max-width: 320px;
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+  .boton-producto-semana {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    max-width: 280px;
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+@media (max-width: 480px) {
+  .boton-producto-semana {
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.95rem;
+    max-width: 85%;
+  }
 }
