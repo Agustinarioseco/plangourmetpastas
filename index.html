@@ -62,18 +62,18 @@
     <span class="cerrarPG" onclick="cerrarPopupDestacadoPG()">&times;</span>
     <div class="popup-bodyPG">
       <div class="popup-textoPG">
-        <h3>Raviolones Cordero Bariloche</h3>
+        <h3>Raviolones Salmón Estilo Finlandés</h3>
         <div class="popup-imagenPG">
-          <img src="./img/cordero-bariloche.png" alt="Cerdo Düsseldorf">
+          <img src="./img/destacado-mar.png" alt="salmon estilo finlandes">
         </div>
-        <p class="introPG"> Desde la inmensidad de la Patagonia, traemos un cordero que respira pureza y sabor. Nuestra Patagonia, en cada bocado.</p>
-        <p><strong>Ingredientes:</strong> Cordero braseado a la cerveza Manush, Milk Stout, cordero ahumado, hongos de pino, ajo confitado, morrón rojo, cebolla caramelizada y muzzarella con masa de cacao amargo.</p>
+        <p class="introPG"> Desde el mar a tu mesa, elaborados con el compromiso y esos sabores inigualables</p>
+        <p><strong>Ingredientes:</strong> Salmon rosado ahumado, finlandia y ricota con masa al huevo</p>
         <p><strong>Ideal para acompañar con:</strong> Salsa de hongos de pino y nuestros quesos Reggianito e infaltable vino Malbec "Saurus" de bodega schroeder</p>
       </div>
     </div>
     <div class="botones-popupPG">
-      <a href="./pages/Contacto.html" class="boton-secundarioPG">Ver sucursales</a>
-      <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-belgrano-85fd80de-6c7e-4eca-9bad-051342083f06-menu?search=plan%20gourmet" target="_blank" class="boton-principalPG">Pedir en PedidosYa</a>
+      <a href="#seccionSucursales" class="boton-secundarioPG" onclick="irASucursales()">Ver sucursales</a>
+      <a href="#seccionPedidosYA" class="boton-principalPG" onclick="irAPedidosYa()">Pedir en PedidosYa</a>
     </div>
   </div>
 </div>
@@ -88,7 +88,7 @@
   </div>  
 
   <!-- Card 2: Sucursales (Ubicaciones) -->
-  <div class="card ubicaciones">
+  <div id="seccionSucursales" class="card ubicaciones">
     <h2>Sucursales</h2>
     <img src="./img/sucursales.png" alt="Sucursales">
     <button type="button" class="btn desplegar-ubicaciones" data-bs-toggle="modal" data-bs-target="#modalUbicaciones">
@@ -98,7 +98,7 @@
 
 
   <!-- Card 3: PedidosYa -->
-  <div class="card">
+  <div id="seccionPedidosYA" class="card">
       <h2>PedidosYa</h2>
       <img src="./img/pedidoya.png" alt="PedidosYa">
       <button type="button" class="btn btn-primary pedido-ya-button" data-bs-toggle="modal" data-bs-target="#pedidosyaModal">
@@ -222,11 +222,11 @@
     <div class="popup-content">
       <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
       <div class="popup-text">
-        <h2>¡Hoy es nuestro #11F!</h2>
-        <p>"20% OFF en todos nuestros fideos frescos"<br> ¡No Te lo Pierdas! </p>
+        <h2>Productos destacados Semana Santa</h2>
+        <p>Variedades de mar, perfectas para pascua<br>¡Elegí tus favoritas!</p>
         <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ/view?utm_content=DAGgabGMsKs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5b301f4466" class="promo-button" target="_blank">Ver Novedades</a>
       </div>
-      <div class="popup-image" style="background-image: url(./img/fideospopup.png);"></div>
+      <div class="popup-image" style="background-image: url(./img/variedad-mar.png);"></div>
     </div>
   </div>
   <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
 
     // Lista de fechas habilitadas para mostrar el pop-up
-    const fechasHabilitadas = ["2025-04-11", "2025-04-05", "2025-04-06"];
+    const fechasHabilitadas = ["2025-04-17", "2025-04-18", "2025-04-19"];
 
     // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
     const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
@@ -284,6 +284,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 </script>
+<script>
+  function irASucursales() {
+    cerrarPopupDestacadoPG(); // Cierra el popup
+
+    // Espera a que se cierre el popup, luego scrollea y abre el modal
+    setTimeout(() => {
+      const seccion = document.getElementById('seccionSucursales');
+      seccion.scrollIntoView({ behavior: 'smooth' });
+
+      // Abre el modal de Bootstrap con JavaScript
+      const modal = new bootstrap.Modal(document.getElementById('modalUbicaciones'));
+      modal.show();
+    }, 400); // Ajustá si el popup tarda más o menos en cerrarse
+  }
+</script>
+<script>
+  function irAPedidosYa() {
+    cerrarPopupDestacadoPG(); // Cierra el popup del destacado
+
+    setTimeout(() => {
+      const seccion = document.getElementById('seccionPedidosYA');
+      seccion.scrollIntoView({ behavior: 'smooth' });
+
+      const modalPedidosYa = new bootstrap.Modal(document.getElementById('pedidosyaModal'));
+      modalPedidosYa.show();
+    }, 400);
+  }
+</script>
+
   <script src="./js/script.js"></script>
 </body>
 </html>
