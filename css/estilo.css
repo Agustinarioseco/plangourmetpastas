@@ -292,6 +292,16 @@ main .section-title p{
   }
 }
 
+#horariosPlanGourmet{
+  padding: 30px 10px;
+  border: 1px solid #b58c2b;
+  margin: 20px 30px;
+  border-radius: 20px;
+}
+.card-horarios h2{
+font-size: 32px;
+color: #D4AE42;
+}
 /* ---------------------------------- */
 /* 🔹 SECCIÓN "COMUNIDAD PLANGUS" */
 /* ---------------------------------- */
@@ -300,6 +310,14 @@ main .section-title p{
   background-color: #252525;
   color: white;
   margin-top: 30px;
+}
+.sucursal-horario h3{
+  font-size: 24px;
+  font-family: "cardo bold";
+}
+.sucursal-horario p{
+  font-size: 20px;
+  font-family: "cardo italica";
 }
 
 /* Contenedor */
