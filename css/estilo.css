@@ -298,8 +298,9 @@ main .section-title p{
   margin: 20px 30px;
   border-radius: 20px;
 }
-.card-horarios h2{
-font-size: 32px;
+
+#horariosPlanGourmet h2{
+font-size: 40px;
 color: #D4AE42;
 }
 .sucursal-horario h3{
