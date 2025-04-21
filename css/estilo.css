@@ -302,6 +302,34 @@ main .section-title p{
 font-size: 32px;
 color: #D4AE42;
 }
+.sucursal-horario h3{
+  font-size: 24px;
+  font-family: "cardo bold";
+}
+.sucursal-horario p{
+  font-size: 20px;
+  font-family: "cardo italica";
+}
+.estado-sucursal {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.estado-sucursal.abierto {
+  background-color: rgb(34, 86, 34);
+  color: #ccc;
+  max-width: 250px;
+  justify-self: center;
+}
+
+.estado-sucursal.cerrado {
+  background-color: #930715;
+  color: #ccc;
+  max-width: 250px;
+  justify-self: center;
+}
+
 /* ---------------------------------- */
 /* 🔹 SECCIÓN "COMUNIDAD PLANGUS" */
 /* ---------------------------------- */
@@ -311,14 +339,7 @@ color: #D4AE42;
   color: white;
   margin-top: 30px;
 }
-.sucursal-horario h3{
-  font-size: 24px;
-  font-family: "cardo bold";
-}
-.sucursal-horario p{
-  font-size: 20px;
-  font-family: "cardo italica";
-}
+
 
 /* Contenedor */
 .comunidad-content {

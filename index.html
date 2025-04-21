@@ -122,25 +122,28 @@
           </div>
         </div>
         <!-- 🕒 Horarios de Atención -->
-<section id="horariosPlanGourmet" class="card-horarios">
-  <h2>Horarios de atención</h2>
-
-  <div class="sucursal-horario">
-    <h3>Sucursal Belgrano</h3>
-    <p>Lunes a Sábados: 09:00 a 22:00 hs<br> Domingos: 10:00-14:00 hs y 18:30-22:00 hs</p>
-  </div>
-
-  <div class="sucursal-horario">
-    <h3>Sucursal Leloir</h3>
-    <p>Lunes a Sábados: 08:00-22:00 hs<br>Domingos: 10:00-14:30 hs y 18:30-22:00 hs</p>
-  </div>
-
-  <div class="sucursal-horario">
-    <h3>Sucursal San Luis</h3>
-    <p>Lunes a Sábados: 09:30-22:00 hs<br> Domingos: 10:00-14:30 hs y 18:30 a 22:00 hs</p>
-  </div>
-</section>
-
+        <section id="horariosPlanGourmet" class="card-horarios">
+          <h2>Horarios de atención</h2>
+        
+          <div class="sucursal-horario">
+            <h3>Sucursal Belgrano</h3>
+            <p>Lunes a Sábados: 09:00 a 22:00 hs<br>Domingos: 10:00-14:00 hs y 18:30-22:00 hs</p>
+            <p class="estado-sucursal" id="estado-belgrano">Cargando...</p>
+          </div>
+        
+          <div class="sucursal-horario">
+            <h3>Sucursal Leloir</h3>
+            <p>Lunes a Sábados: 08:00-22:00 hs<br>Domingos: 10:00-14:30 hs y 18:30-22:00 hs</p>
+            <p class="estado-sucursal" id="estado-leloir">Cargando...</p>
+          </div>
+        
+          <div class="sucursal-horario">
+            <h3>Sucursal San Luis</h3>
+            <p>Lunes a Sábados: 09:30-22:00 hs<br>Domingos: 10:00-14:30 hs y 18:30 a 22:00 hs</p>
+            <p class="estado-sucursal" id="estado-sanluis">Cargando...</p>
+          </div>
+        </section>
+        
 <!--comunidad plangu-->
 <section class="comunidad-section">
   <div class="container">
@@ -332,6 +335,72 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 400);
   }
 </script>
+<script>
+  function estaDentroDeHorario(horas, ahora) {
+    return horas.some(rango => {
+      const [inicioHora, inicioMin] = rango.inicio.split(":").map(Number);
+      const [finHora, finMin] = rango.fin.split(":").map(Number);
+      const desde = inicioHora + inicioMin / 60;
+      const hasta = finHora + finMin / 60;
+      const actual = ahora.getHours() + ahora.getMinutes() / 60;
+      return actual >= desde && actual <= hasta;
+    });
+  }
+
+  function actualizarEstadoSucursal(idElemento, horarios) {
+    const ahora = new Date();
+    const dia = ahora.getDay(); // 0 = domingo, 1 = lunes...
+
+    const hoy =
+      dia === 0 ? "domingo" :
+      dia >= 1 && dia <= 6 ? "lunesASabado" : "cerrado";
+
+    const horasSucursal = horarios[hoy] || [];
+    const estaAbierto = estaDentroDeHorario(horasSucursal, ahora);
+
+    const estadoElemento = document.getElementById(idElemento);
+    estadoElemento.textContent = estaAbierto ? "Abierto ahora" : "Cerrado";
+    estadoElemento.className = `estado-sucursal ${estaAbierto ? "abierto" : "cerrado"}`;
+  }
+
+  // Horarios definidos por sucursal
+  const horariosBelgrano = {
+    lunesASabado: [{ inicio: "09:00", fin: "22:00" }],
+    domingo: [
+      { inicio: "10:00", fin: "14:00" },
+      { inicio: "18:30", fin: "22:00" }
+    ]
+  };
+
+  const horariosLeloir = {
+    lunesASabado: [{ inicio: "08:00", fin: "22:00" }],
+    domingo: [
+      { inicio: "10:00", fin: "14:30" },
+      { inicio: "18:30", fin: "22:00" }
+    ]
+  };
+
+  const horariosSanLuis = {
+    lunesASabado: [{ inicio: "09:30", fin: "22:00" }],
+    domingo: [
+      { inicio: "10:00", fin: "14:30" },
+      { inicio: "18:30", fin: "22:00" }
+    ]
+  };
+
+  function actualizarTodosLosEstados() {
+    actualizarEstadoSucursal("estado-belgrano", horariosBelgrano);
+    actualizarEstadoSucursal("estado-leloir", horariosLeloir);
+    actualizarEstadoSucursal("estado-sanluis", horariosSanLuis);
+  }
+
+  // Ejecutar al cargar
+  actualizarTodosLosEstados();
+
+  // Actualizar cada 60 segundos
+  setInterval(actualizarTodosLosEstados, 60000);
+</script>
+
 
   <script src="./js/script.js"></script>
 </body>
