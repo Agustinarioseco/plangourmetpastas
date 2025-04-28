@@ -245,11 +245,11 @@
     <div class="popup-content">
       <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
       <div class="popup-text">
-        <h2>Destacados<br>de Hoy</h2>
-        <p><br><strong>Sorrentinos Mix de verdes<br>Estilo indio</strong><br>Espinaca, brócoli, verdeo, acelga, arvejas, cebolla y muzzarella con masa de espinaca y curry.</p>
+        <h2>¡Mañana llega<br>el #29L!</h2>
+        <p><br><strong>20% OFF en nuestras variedades de lasagna</p>
         <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ/view?utm_content=DAGgabGMsKs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5b301f4466" class="promo-button" target="_blank">Ver Novedades</a>
       </div>
-      <div class="popup-image" style="background-image: url(./img/Frame\ 131.png);"></div>
+      <div class="popup-image" style="background-image: url(./img/lasagna.png);"></div>
     </div>
   </div>
   <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
 
     // Lista de fechas habilitadas para mostrar el pop-up
-    const fechasHabilitadas = ["2025-04-27", "2025-04-25", "2025-04-26"];
+    const fechasHabilitadas = ["2025-04-28", "2025-04-29", "2025-04-30"];
 
     // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
     const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;

@@ -1546,14 +1546,14 @@ justify-self: center;
 
 #promo-popup .popup-text p {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   color: #f5f5f5;
   font-family: "Cardo Regular", sans-serif;
 }
 
 /* 🔹 Botón de la promoción */
 #promo-popup .promo-button {
-  padding: 10px 20px;
+  padding:20px;
   background-color: #c8a559;
   color: #fff;
   border: none;
@@ -1619,20 +1619,20 @@ justify-self: center;
 
   #promo-popup .popup-image {
     width: 100%;
-    height:300px;
+    height:200px;
   }
 }
 
 @media (max-width: 430px) {
   #promo-popup .popup-content {
     flex-direction: column;
-    margin:0px 20px;
+    margin: 20px;
   }
 
   #promo-popup .popup-text, 
   #promo-popup .popup-image {
     width: 90%;
-    height: 300px; /* Ajusta la altura según necesidad */
+    height: 200px; /* Ajusta la altura según necesidad */
   }
 
   #promo-popup .popup-image {
