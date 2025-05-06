@@ -1504,7 +1504,6 @@ justify-self: center;
   }
 }
 
-/* 🔹 Estilo general del popup */
 #promo-popup {
   display: none;
   position: fixed;
@@ -1512,56 +1511,61 @@ justify-self: center;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-/* 🔹 Contenido del popup */
 #promo-popup .popup-content {
-  background: white;
   display: flex;
-  width: 600px;
-  max-width: 90%;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 90%;
+  max-width: 600px;
+  background-color: #111;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 20px;
 }
 
-/* 🔹 Sección de texto */
+/* Texto */
 #promo-popup .popup-text {
-  width: 50%;
-  padding: 10px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
 }
 
 #promo-popup .popup-text h2 {
-  font-size:30px;
+  font-size: 26px;
   color: #c8a559;
-  font-family: "Cardo Bold", sans-serif;
+  margin-bottom: 10px;
+  font-family: "Cardo Bold", serif;
 }
 
 #promo-popup .popup-text p {
-  font-size: 18px;
-  margin-bottom: 50px;
+  font-size: 16px;
   color: #f5f5f5;
-  font-family: "Cardo Regular", sans-serif;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  font-family: "Cardo Regular", serif;
 }
 
-/* 🔹 Botón de la promoción */
+/* Botón */
 #promo-popup .promo-button {
-  padding:2px;
+  padding: 10px;
   background-color: #c8a559;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
+  color: white;
   font-weight: bold;
-  transition: background 0.3s;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: auto;
 }
 
 #promo-popup .promo-button:hover {
@@ -1569,80 +1573,69 @@ justify-self: center;
   color: black;
 }
 
-/* 🔹 Sección de la imagen */
+/* Imagen (oculta en mobile) */
 #promo-popup .popup-image {
   width: 50%;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Contenedor del popup para asegurar posición relativa */
-#promo-popup .popup-content {
-  position: relative; /* Esto es clave para que el botón se posicione relativo al contenedor */
-  background-color: #111;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 600px;
-  width: 100%;
   display: flex;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
-/* Botón de cerrar dentro del rectángulo */
+#promo-popup .popup-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Botón de cierre */
 #promo-popup .close-button {
-  position: absolute;  /* Ubicación relativa al contenedor */
-  top: 0px;         /* 10px desde arriba */
-  right: 10px;         /* 10px desde la derecha */
+  position: absolute;
+  top: 5px;
+  right: 10px;
   background: none;
   border: none;
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 28px;
+  color: #ffffff;
   cursor: pointer;
-  color: #ffffff;    
-  margin: 0px; /* Asegura que esté por encima de otros elementos */
 }
 
-
-
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   #promo-popup .popup-content {
-    flex-direction: column;
-    margin: 20px;
+    flex-direction: row;
   }
 
-  #promo-popup .popup-text, 
-  #promo-popup .popup-image {
-    width: 100%;
-    height: auto /* Ajusta la altura según necesidad */
+  #promo-popup .popup-text {
+    width: 50%;
   }
 
   #promo-popup .popup-image {
-    width: 100%;
-    height:200px;
-  }
-}
-
-@media (max-width: 430px) {
-  #promo-popup .popup-content {
-    flex-direction: column;
-    margin: 20px;
-  }
-
-  #promo-popup .popup-text, 
-  #promo-popup .popup-image {
-    width: 90%;
-    height: 200px; /* Ajusta la altura según necesidad */
-  }
-
-  #promo-popup .popup-image {
+    display: block;
+    width: 50%;
     background-size: cover;
     background-position: center;
-    width: 0;
-    height: 0;
+  }
+}
+@media (min-width: 769px) {
+  #promo-popup .popup-image {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #promo-popup .popup-text {
+    width: 50%;
   }
 }
 
+@media (max-width: 768px) {
+  #promo-popup .popup-image {
+    display: none;
+  }
+}
 
 
 /*------------------ POP UP PRODUCTOS --------------------*/
