@@ -1553,7 +1553,7 @@ justify-self: center;
 
 /* 🔹 Botón de la promoción */
 #promo-popup .promo-button {
-  padding:20px;
+  padding:2px;
   background-color: #c8a559;
   color: #fff;
   border: none;
@@ -1580,7 +1580,7 @@ justify-self: center;
 #promo-popup .popup-content {
   position: relative; /* Esto es clave para que el botón se posicione relativo al contenedor */
   background-color: #111;
-  padding: 40px;
+  padding: 10px;
   border-radius: 10px;
   max-width: 600px;
   width: 100%;
