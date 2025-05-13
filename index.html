@@ -54,7 +54,7 @@
   <p>Explorá nuestras opciones y disfrutá de una experiencia gourmet única.</p>
 </div>
 <!-- Botón para abrir el pop-up -->
-<button class="btn-destacadoPG" onclick="mostrarPopupDestacadoPG()">PRODUCTO DESTACADO DE LA SEMANA</button>
+<button class="btn-destacadoPG" onclick="mostrarPopupDestacadoPG()">PRODUCTO DESTACADO DEL DÍA</button>
 
 <!-- Pop-up del producto destacado -->
 <div id="popupDestacadoPG" class="popupDestacadoPG">
@@ -62,13 +62,13 @@
     <span class="cerrarPG" onclick="cerrarPopupDestacadoPG()">&times;</span>
     <div class="popup-bodyPG">
       <div class="popup-textoPG">
-        <h3>Raviolones Pulpo a la española</h3>
+        <h3>Sorrentinos Italian Roast</h3>
         <div class="popup-imagenPG">
-          <img src="./img/Frame 133.png" alt="Múnich">
+          <img src="./img/Frame 132.png" alt="Múnich">
         </div>
-        <p class="introPG">De Córdoba a tu plato</p>
-        <p><strong>Ingredientes:</strong> <br>Pulpo, salsa de tomate, <br>cebolla, morrón rojo y muzzarella <br>con masa de pimentón español.</p>
-        <p><strong>Ideal para acompañar con:</strong> Tuco Fileto o salsa rosa y nuestros quesos parmesanos</p>
+        <p class="introPG">Sabores italianos exclusivos para vos</p>
+        <p><strong>Ingredientes:</strong> <br>Cafe tostado molido, humo seco, azucar mascabo, miel, laurel, terma serrano, cebolla polvo, salsa de soja, caldo de carne, demiglace, canela, pimienta negra y muzzarella con masa de café</p>
+        <p><strong>Ideal para acompañar con:</strong> Salsa de ajos confitados o cebolla caramelizada y nuestros quesos reggianito o parmesano jovén</p>
       </div>
     </div>
     <div class="botones-popupPG">
@@ -246,12 +246,12 @@
       <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
   
       <div class="popup-image">
-        <img src="./img/sorrentinos-cordon.png" alt="Promo Sorrentinos">
+        <img src="./img/Frame 131 (1).png" alt="Promos">
       </div>
   
       <div class="popup-text">
-        <h2>¡Muy Pronto<br>nuestro #8S!</h2>
-        <p>20% OFF en nuestras variedades seleccionadas de sorrentinos</p>
+        <h2>¡Día del Hummus!</h2>
+        <p>Variedades exclusivas con mucho sabor</p>
         <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ" class="promo-button" target="_blank">Ver Novedades</a>
       </div>
     </div>
@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
 
     // Lista de fechas habilitadas para mostrar el pop-up
-    const fechasHabilitadas = ["2025-05-06", "2025-05-07", "2025-05-08"];
+    const fechasHabilitadas = ["2025-05-13", "2025-05-07", "2025-05-08"];
 
     // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
     const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
