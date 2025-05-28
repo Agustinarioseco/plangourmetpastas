@@ -294,13 +294,12 @@ main .section-title p{
 
 #horariosPlanGourmet{
   padding: 30px 10px;
-  border: 1px solid #b58c2b;
   margin: 20px 30px;
   border-radius: 20px;
 }
 
-#horariosPlanGourmet h2{
-font-size: 40px;
+.card-hoorarios h2{
+font-size: 50px;
 color: #D4AE42;
 }
 .sucursal-horario h3{
@@ -331,7 +330,7 @@ color: #D4AE42;
   justify-self: center;
 }
  section .sucursal-horario .texto-gourmet{
-  font-size: 20px !important;
+  font-size: 25px !important;
   color: #f5f5f5 !important;
 }
 
@@ -340,7 +339,7 @@ color: #D4AE42;
 /* ---------------------------------- */
 .comunidad-section {
   padding: 40px 20px;
-  background-color: #252525;
+  background-color: #181818;
   color: white;
   margin-top: 30px;
 }
@@ -1022,7 +1021,7 @@ a .whatsapp-icon {
 .footer {
   font-family: "cardo bold";
   width: 100%;
-  background-color: #181818;
+  background-color: #111;
   color: white;
   padding: 40px 20px 0px;
   text-align: center;
@@ -1826,5 +1825,27 @@ justify-self: center;
     flex-direction: column;
     gap: 1rem;
     margin-top: 1.5rem;
+  }
+}
+
+.sucursales-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Estilo para escritorio */
+@media (min-width: 768px) {
+  .sucursales-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sucursal-horario {
+    flex: 1;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 20px 15px;
+    margin: 0 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 }
