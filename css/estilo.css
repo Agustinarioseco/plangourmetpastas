@@ -1516,7 +1516,7 @@ justify-self: center;
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.6);
+  background: #111;
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -1524,24 +1524,21 @@ justify-self: center;
 
 #promo-popup .popup-content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 90%;
-  max-width: 600px;
-  background-color: #111;
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 30px 20px;
 }
 
 /* Texto */
 #promo-popup .popup-text {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  width: 100%;
+  max-width: 280px; /* Tamaño más razonable para la imagen */
+  padding: 0;
 }
 
 #promo-popup .popup-text h2 {
@@ -1578,18 +1575,17 @@ justify-self: center;
 
 /* Imagen (oculta en mobile) */
 #promo-popup .popup-image {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  width: 100%;
+  max-width: 400px; /* Más ancho en desktop */
+  padding: 5px;
 }
 
 #promo-popup .popup-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
 }
 
 /* Botón de cierre */
@@ -1604,41 +1600,7 @@ justify-self: center;
   cursor: pointer;
 }
 
-@media (min-width: 769px) {
-  #promo-popup .popup-content {
-    flex-direction: row;
-  }
 
-  #promo-popup .popup-text {
-    width: 50%;
-  }
-
-  #promo-popup .popup-image {
-    display: block;
-    width: 50%;
-    background-size: cover;
-    background-position: center;
-  }
-}
-@media (min-width: 769px) {
-  #promo-popup .popup-image {
-    display: block;
-    width: 50%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-
-  #promo-popup .popup-text {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  #promo-popup .popup-image {
-    display: none;
-  }
-}
 
 
 /*------------------ POP UP PRODUCTOS --------------------*/

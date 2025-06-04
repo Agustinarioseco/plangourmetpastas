@@ -256,13 +256,12 @@
     <div class="popup-content">
       <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
   
-      <div class="popup-image">
-        <img src="./img/lasagna.png" alt="Promos">
-      </div>
-  
       <div class="popup-text">
-        <h2>¡Llegó el #29L!</h2>
-        <p>Mira las variedades con 20% de descuento</p>
+        <h2>¡Se viene el #8S!</h2><div class="popup-image">
+        <img src="./img/sorrentinos-cordon.png" alt="Promos">
+      </div>
+        <p>Mira nuestras variedades con 20% de descuento</p>
+        
         <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ" class="promo-button" target="_blank">Ver Novedades</a>
       </div>
     </div>
@@ -286,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
 
     // Lista de fechas habilitadas para mostrar el pop-up
-    const fechasHabilitadas = ["2025-05-28", "2025-05-29", "2025-05-21","2025-05-22"];
+    const fechasHabilitadas = ["2025-06-04", "2025-06-05", "2025-06-06","2025-06-07"];
 
     // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
     const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
