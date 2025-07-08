@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Gourmet | Pastas</title>
-    <meta name="description" content="Una experiencia gourmet en cada plato. Pastas artesanales con rellenos innovadores y sabores que llevan tu paladar de viaje">
-    <link rel="shortcut icon"  type="image/png" href="./img/Capa_1 (4).png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Gourmet | Pastas</title>
+  <meta name="description"
+    content="Una experiencia gourmet en cada plato. Pastas artesanales con rellenos innovadores y sabores que llevan tu paladar de viaje">
+  <link rel="shortcut icon" type="image/png" href="./img/Capa_1 (4).png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<meta name="google-site-verification" content="bomhQRpLeis43nnz0d7X-I5nWrtNooSsBd8YFgH_MSc" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <meta name="google-site-verification" content="bomhQRpLeis43nnz0d7X-I5nWrtNooSsBd8YFgH_MSc" />
 </head>
+
 <body id="grilla">
   <header class="header">
     <nav class="navbar navbar-expand-lg">
@@ -44,389 +47,416 @@
       </div>
     </nav>
   </header>
-<!--main de inicio, contiene texto de bienvenida, carrusel de imagenes, lista de inicio-->
-<main class="main"> 
-      <!--portada-->
-      <img src="./img/portada.png" alt="Imagen destacada" class="imagen-full">
-<!--titulos-->      
-<div class="section-title">
-  <h2>Descubrí el mejor Plan Gourmet para vos</h2>
-  <p>Explorá nuestras opciones y disfrutá de una experiencia gourmet única.</p>
-</div>
-<!-- Botón para abrir el pop-up -->
-<button class="btn-destacadoPG" onclick="mostrarPopupDestacadoPG()">PRODUCTO DESTACADO DEL DÍA</button>
+  <!--main de inicio, contiene texto de bienvenida, carrusel de imagenes, lista de inicio-->
+  <main class="main">
+    <!--portada-->
+    <img src="./img/portada.png" alt="Imagen destacada" class="imagen-full">
+    <!--titulos-->
+    <div class="section-title">
+      <h2>Descubrí el mejor Plan Gourmet para vos</h2>
+      <p>Explorá nuestras opciones y disfrutá de una experiencia gourmet única.</p>
+    </div>
+    <!-- Botón para abrir el pop-up -->
+    <button class="btn-destacadoPG" onclick="mostrarPopupDestacadoPG()">PRODUCTO DESTACADO DEL DÍA</button>
 
-<!-- Pop-up del producto destacado -->
-<div id="popupDestacadoPG" class="popupDestacadoPG">
-  <div class="popup-contenidoPG">
-    <span class="cerrarPG" onclick="cerrarPopupDestacadoPG()">&times;</span>
-    <div class="popup-bodyPG">
-      <div class="popup-textoPG">
-        <h3>Raviolones Estilo Argentino</h3>
-        <div class="popup-imagenPG">
-          <img src="./img/Frame 122.png" alt="Argetino">
+    <!-- Pop-up del producto destacado -->
+    <div id="popupDestacadoPG" class="popupDestacadoPG">
+      <div class="popup-contenidoPG">
+        <span class="cerrarPG" onclick="cerrarPopupDestacadoPG()">&times;</span>
+        <div class="popup-bodyPG">
+          <div class="popup-textoPG">
+            <h3>Nuevo <br>POSTRE BRUCE</h3>
+            <div class="popup-imagenPG">
+              <img src="./img/postre bruce.png" alt="Argetino">
+            </div>
+            <p class="introPG">Sabor lleno de chocolate</p>
+            <p><strong>Ingredientes:</strong> <br>Mousse de chocolate con trocitos de brownie cubierto de nueces</p>
+            <p><strong>Ideal para acompañar con:</strong> despues de alguna de nuestras variedades de autor</p>
+          </div>
         </div>
-        <p class="introPG">Sabor lleno de patria</p>
-        <p><strong>Ingredientes:</strong> <br> Carne de ternera al malbec, espinaca, cebolla, morrón, ajo y muzzarella con masa al huevo.</p>
-        <p><strong>Ideal para acompañar con:</strong> Salsa fileto o tuco plan gourmet.</p>
+        <div class="botones-popupPG">
+          <a href="#seccionSucursales" class="boton-secundarioPG" onclick="irASucursales()">Ver sucursales</a>
+          <a href="#seccionPedidosYA" class="boton-principalPG" onclick="irAPedidosYa()">Pedir en PedidosYa</a>
+        </div>
       </div>
     </div>
-    <div class="botones-popupPG">
-      <a href="#seccionSucursales" class="boton-secundarioPG" onclick="irASucursales()">Ver sucursales</a>
-      <a href="#seccionPedidosYA" class="boton-principalPG" onclick="irAPedidosYa()">Pedir en PedidosYa</a>
+
+    <!-- 🔹 Sección de Cards -->
+    <div class="container">
+      <!-- Card 1: Menú Digital -->
+      <div class="card">
+        <h2>Menú Digital</h2>
+        <img src="./img/menu.png" alt="Menú Digital">
+        <a href="https://www.canva.com/design/DAEvy4wWrEk/T8pyQ9yecM_FigUOxYoHUg/view?utm_content=DAEvy4wWrEk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+          target="_blank" class="btn">Ver Menú</a>
+      </div>
+
+      <!-- Card 2: Sucursales (Ubicaciones) -->
+      <div id="seccionSucursales" class="card ubicaciones">
+        <h2>Sucursales</h2>
+        <img src="./img/sucursales.png" alt="Sucursales">
+        <button type="button" class="btn desplegar-ubicaciones" data-bs-toggle="modal"
+          data-bs-target="#modalUbicaciones">
+          Ver Ubicaciones
+        </button>
+      </div>
+
+
+      <!-- Card 3: PedidosYa -->
+      <div id="seccionPedidosYA" class="card">
+        <h2>PedidosYa</h2>
+        <img src="./img/pedidoya.png" alt="PedidosYa">
+        <button type="button" class="btn btn-primary pedido-ya-button" data-bs-toggle="modal"
+          data-bs-target="#pedidosyaModal">
+          Ver Sucursales en Pedido Ya
+        </button>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- 🔹 Sección de Cards -->
-<div class="container">
-  <!-- Card 1: Menú Digital -->
-  <div class="card">
-      <h2>Menú Digital</h2>
-      <img src="./img/menu.png" alt="Menú Digital">
-      <a href="https://www.canva.com/design/DAEvy4wWrEk/T8pyQ9yecM_FigUOxYoHUg/view?utm_content=DAEvy4wWrEk&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank" class="btn">Ver Menú</a>
-  </div>  
-
-  <!-- Card 2: Sucursales (Ubicaciones) -->
-  <div id="seccionSucursales" class="card ubicaciones">
-    <h2>Sucursales</h2>
-    <img src="./img/sucursales.png" alt="Sucursales">
-    <button type="button" class="btn desplegar-ubicaciones" data-bs-toggle="modal" data-bs-target="#modalUbicaciones">
-        Ver Ubicaciones
-    </button>
-</div>
-
-
-  <!-- Card 3: PedidosYa -->
-  <div id="seccionPedidosYA" class="card">
-      <h2>PedidosYa</h2>
-      <img src="./img/pedidoya.png" alt="PedidosYa">
-      <button type="button" class="btn btn-primary pedido-ya-button" data-bs-toggle="modal" data-bs-target="#pedidosyaModal">
-        Ver Sucursales en Pedido Ya
-      </button>
-  </div>
-</div>
-
-<!--boton whatsapp-->
-        <div class="whatsapp-float">
-          <img src="img/whatsapp.png" alt="WhatsApp" onclick="toggleWhatsApp()">
-          <div class="whatsapp-options" id="whatsapp-options">
-              <a href="https://wa.me/5492994027353" target="_blank">
-                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Belgrano</a>
-              <a href="https://wa.me/5492994730935" target="_blank">
-                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Leloir</a>
-              <a href="https://wa.me/5492994068032" target="_blank">
-                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">San Luis</a>
-              <a href="https://wa.me/5492996561692" target="_blank">
-                  <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Gourmet Lab</a>
-          </div>
+    <!--boton whatsapp-->
+    <div class="whatsapp-float">
+      <img src="img/whatsapp.png" alt="WhatsApp" onclick="toggleWhatsApp()">
+      <div class="whatsapp-options" id="whatsapp-options">
+        <a href="https://wa.me/5492994027353" target="_blank">
+          <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Belgrano</a>
+        <a href="https://wa.me/5492994730935" target="_blank">
+          <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Leloir</a>
+        <a href="https://wa.me/5492994068032" target="_blank">
+          <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">San Luis</a>
+        <a href="https://wa.me/5492996561692" target="_blank">
+          <img src="img/whatsapp2.png" class="whatsapp-icon" alt="WhatsApp">Gourmet Lab</a>
+      </div>
+    </div>
+    <!-- 🕒 Horarios de Atención -->
+    <section id="horariosPlanGourmet" class="card-horarios">
+      <h2>Horarios de atención</h2>
+      <div class="sucursales-grid">
+        <div class="sucursal-horario">
+          <h3>Sucursal Belgrano</h3>
+          <p>Lunes a Sábados: <br> 09:00 - 22:00hs<br> Domingos <br> 10:00 - 14:30hs <br> 18:30 - 22:00hs</p>
+          <p class="estado-sucursal" id="estado-belgrano">Cargando...</p>
         </div>
-        <!-- 🕒 Horarios de Atención -->
-        <section id="horariosPlanGourmet" class="card-horarios">
-          <h2>Horarios de atención</h2>
-        <div class="sucursales-grid">
-          <div class="sucursal-horario">
-            <h3>Sucursal Belgrano</h3>
-            <p>Lunes a Sábados: <br> 09:00 - 22:00hs<br> Domingos <br> 10:00 - 14:30hs <br> 18:30 - 22:00hs</p>
-            <p class="estado-sucursal" id="estado-belgrano">Cargando...</p>
-          </div>
-        
-          <div class="sucursal-horario">
-            <h3>Sucursal Leloir</h3>
-            <p>Lunes a Sábados: <br> 08:00 - 22:00hs<br>Domingos: <br>10:00 - 14:30hs <br> 18:30 - 22:00hs</p>
-            <p class="estado-sucursal" id="estado-leloir">Cargando...</p>
-          </div>
-        
-          <div class="sucursal-horario">
-            <h3>Sucursal San Luis</h3>
-            <p>Lunes a Domingos: <br>09:30-14:30 hs <br>18:30 - 21:30hs</p>
-            <p class="estado-sucursal" id="estado-sanluis">Cargando...</p>
-          </div>
 
-          <section>
-            <div class="sucursal-horario">
+        <div class="sucursal-horario">
+          <h3>Sucursal Leloir</h3>
+          <p>Lunes a Sábados: <br> 08:00 - 22:00hs<br>Domingos: <br>10:00 - 14:30hs <br> 18:30 - 22:00hs</p>
+          <p class="estado-sucursal" id="estado-leloir">Cargando...</p>
+        </div>
+
+        <div class="sucursal-horario">
+          <h3>Sucursal San Luis</h3>
+          <p>Lunes a Domingos: <br>09:30-14:30 hs <br>18:30 - 21:30hs</p>
+          <p class="estado-sucursal" id="estado-sanluis">Cargando...</p>
+        </div>
+
+        <section>
+          <div class="sucursal-horario">
             <h2 class="texto-gourmet">Tambien podés conseguir nuestros productos en</h2>
             <h3>Gourmet Lab Market</h3>
             <p>Lunes a Sábados: <br> 07:30 - 22:30 hs <br> Domingos: <br> 10:00 - 14.30 <br> 19.00 - 22.30hs</p>
             <p class="estado-sucursal" id="estado-gourmetlab">Cargando...</p>
           </div>
-          </section>
-        </div>
-          
         </section>
-        
-<!--comunidad plangu-->
-<section class="comunidad-section">
-  <div class="container">
-      <div class="comunidad-content">
+      </div>
+
+    </section>
+
+    <!--comunidad plangu-->
+    <section class="comunidad-section">
+      <div class="container">
+        <div class="comunidad-content">
           <div class="comunidad-image">
-              <img src="img/comunidad.jpg" alt="Comunidad Plangus">
+            <img src="img/comunidad.jpg" alt="Comunidad Plangus">
           </div>
           <div class="comunidad-text">
-              <h2>Comunidad Plangu</h2>
-              <p>Sumate a nuestra comunidad y compartí tu pasión por las pastas de autor.</p>
-              <p>📸 Subí tus fotos y etiquetanos en Instagram</p>
-              <p>💬 Comentá y recomendanos a tus amigos</p>
-              <p>🎁 Participá de sorteos, enterate de decuentos exclusivos y mucho más siendo parte de nuestra comunidad</p>
-              <a href="https://www.instagram.com/plangourmetpastas/" target="_blank" class="btn-comunidad">¡Sumate ahora!</a>
+            <h2>Comunidad Plangu</h2>
+            <p>Sumate a nuestra comunidad y compartí tu pasión por las pastas de autor.</p>
+            <p>📸 Subí tus fotos y etiquetanos en Instagram</p>
+            <p>💬 Comentá y recomendanos a tus amigos</p>
+            <p>🎁 Participá de sorteos, enterate de decuentos exclusivos y mucho más siendo parte de nuestra comunidad
+            </p>
+            <a href="https://www.instagram.com/plangourmetpastas/" target="_blank" class="btn-comunidad">¡Sumate
+              ahora!</a>
           </div>
+        </div>
       </div>
-  </div>
-</section>
-</main>
-<!--pie de pagina-->
-<footer class="footer">
-  <div class="footer-content">
+    </section>
+  </main>
+  <!--pie de pagina-->
+  <footer class="footer">
+    <div class="footer-content">
       <!-- Información de la marca -->
       <div class="footer-info">
-          <h3>Plan Gourmet</h3>
-          <p>Pastas de autor, experiencias inolvidables.</p>
+        <h3>Plan Gourmet</h3>
+        <p>Pastas de autor, experiencias inolvidables.</p>
       </div>
 
       <!-- Enlaces -->
       <div class="footer-links">
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./pages/quienes_somos.html">¿Quiénes somos?</a></li>
-            <li><a href="./pages/nuestras_pastas.html">Nuestras pastas</a></li>
-            <li><a href="./pages/Fechas_especiales.html">Fechas especiales</a></li>
-            <li><a href="./pages/Contacto.html">Contacto</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./pages/quienes_somos.html">¿Quiénes somos?</a></li>
+          <li><a href="./pages/nuestras_pastas.html">Nuestras pastas</a></li>
+          <li><a href="./pages/Fechas_especiales.html">Fechas especiales</a></li>
+          <li><a href="./pages/Contacto.html">Contacto</a></li>
         </ul>
-    </div>
+      </div>
 
-    <!-- Redes Sociales -->
-    <div class="footer-social">
+      <!-- Redes Sociales -->
+      <div class="footer-social">
         <h4>Seguinos</h4>
         <ul>
-            <li> <img src="./img/instagram (1).png" alt=""><a href="https://www.instagram.com/plangourmetpastas/" target="_blank">Instagram</a></li>
-            <li> <img src="./img/facebook (1).png" alt=""><a href="https://www.facebook.com/PlanGourmetPastas/" target="_blank">Facebook</a></li>
+          <li> <img src="./img/instagram (1).png" alt=""><a href="https://www.instagram.com/plangourmetpastas/"
+              target="_blank">Instagram</a></li>
+          <li> <img src="./img/facebook (1).png" alt=""><a href="https://www.facebook.com/PlanGourmetPastas/"
+              target="_blank">Facebook</a></li>
         </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© Plan Gourmet 2025. Todos los derechos reservados.</p>
-</div>
-</footer>
-
-<!-- 🔥 MODAL Bootstrap -->
-<div class="modal fade" id="modalUbicaciones" tabindex="-1" aria-labelledby="modalUbicacionesLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="modalUbicacionesLabel">Nuestras Sucursales</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <ul>
-                  <li><a href="https://www.google.com/maps/place/Plan+Gourmet+Pastas+Belgrano/@-38.9506281,-68.0612834,17z/data=!3m1!4b1!4m6!3m5!1s0x960a3374182f536d:0x5d77da0c12b4b04a!8m2!3d-38.9506281!4d-68.0612834!16s%2Fg%2F11m_flj4nc?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Belgrano</a></li>
-                  <li><a href="https://www.google.com/maps/place/Plan+Gourmet+Pastas+Leloir/@-38.9427992,-68.0489005,17z/data=!3m1!4b1!4m6!3m5!1s0x960a314775e2fb99:0x6be0dad9c0036866!8m2!3d-38.9428034!4d-68.0463256!16s%2Fg%2F11ld8phsyt?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Leloir</a></li>
-                  <li><a href="https://www.google.com/maps/place/Plan+Gourmet+Pastas+San+Luis/@-38.969307,-68.0636496,17z/data=!3m1!4b1!4m6!3m5!1s0x960a323aa1ae8353:0x44d4dbde156d4488!8m2!3d-38.9693112!4d-68.0610747!16s%2Fg%2F11c5rvb7lm?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 San Luis</a></li>
-                  <li><a href="https://www.google.com/maps/place/Gourmet+Lab+Market/@-38.942075,-68.0546625,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33d699f90f07:0x2a9ded38184b8d8!8m2!3d-38.9420792!4d-68.0520876!16s%2Fg%2F11lzpb35mr?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Gourmet Lab</a></li>
-              </ul>
-          </div>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Plan Gourmet 2025. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- 🔥 MODAL Bootstrap -->
+  <div class="modal fade" id="modalUbicaciones" tabindex="-1" aria-labelledby="modalUbicacionesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalUbicacionesLabel">Nuestras Sucursales</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><a
+                href="https://www.google.com/maps/place/Plan+Gourmet+Pastas+Belgrano/@-38.9506281,-68.0612834,17z/data=!3m1!4b1!4m6!3m5!1s0x960a3374182f536d:0x5d77da0c12b4b04a!8m2!3d-38.9506281!4d-68.0612834!16s%2Fg%2F11m_flj4nc?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">📍 Belgrano</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/Plan+Gourmet+Pastas+Leloir/@-38.9427992,-68.0489005,17z/data=!3m1!4b1!4m6!3m5!1s0x960a314775e2fb99:0x6be0dad9c0036866!8m2!3d-38.9428034!4d-68.0463256!16s%2Fg%2F11ld8phsyt?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">📍 Leloir</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/Plan+Gourmet+Pastas+San+Luis/@-38.969307,-68.0636496,17z/data=!3m1!4b1!4m6!3m5!1s0x960a323aa1ae8353:0x44d4dbde156d4488!8m2!3d-38.9693112!4d-68.0610747!16s%2Fg%2F11c5rvb7lm?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">📍 San Luis</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/Gourmet+Lab+Market/@-38.942075,-68.0546625,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33d699f90f07:0x2a9ded38184b8d8!8m2!3d-38.9420792!4d-68.0520876!16s%2Fg%2F11lzpb35mr?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">📍 Gourmet Lab</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<!-- Botón para abrir el modal -->
+  <!-- Botón para abrir el modal -->
 
 
-<!-- 🔥 Modal de Pedidos Ya -->
-<div class="modal fade" id="pedidosyaModal" tabindex="-1" aria-labelledby="pedidosyaModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2 class="modal-title" id="pedidosyaModalLabel">Sucursales en Pedido Ya</h2>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-      <ul class="pedidosya-list">
-        <li><a href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-belgrano-85fd80de-6c7e-4eca-9bad-051342083f06-menu?search=plan%20gourmet" target="_blank">Sucursal Belgrano - Disponible en Pedidos Ya</a></li>
-        <li> <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-leloir-bd09ee99-3b87-4c26-832b-e9aa6d5d5d32-menu?search=plan%20gourmet"target="_blank">Sucursal Leloir - Disponible en Pedidos Ya</a></li>
-        <li><a href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-san-luis-78a9a31f-b072-4c13-98a7-04e245b38f80-menu?search=plan%20gourmet%20san%20luis" target="_blank">Sucursal San Luis - Disponible en Pedidos Ya</a></li>
-        <li><a href="https://www.pedidosya.com.ar/restaurantes/neuquen/gourmet-lab-879a48f7-ab61-4ab5-9bae-2919757b6c9a-menu?search=plan%20gourmet" target="_blank">Gourmet Lab market - Disponible en Pedidos Ya</a></li>
-      </ul>
+  <!-- 🔥 Modal de Pedidos Ya -->
+  <div class="modal fade" id="pedidosyaModal" tabindex="-1" aria-labelledby="pedidosyaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="pedidosyaModalLabel">Sucursales en Pedido Ya</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="pedidosya-list">
+            <li><a
+                href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-belgrano-85fd80de-6c7e-4eca-9bad-051342083f06-menu?search=plan%20gourmet"
+                target="_blank">Sucursal Belgrano - Disponible en Pedidos Ya</a></li>
+            <li> <a
+                href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-leloir-bd09ee99-3b87-4c26-832b-e9aa6d5d5d32-menu?search=plan%20gourmet"
+                target="_blank">Sucursal Leloir - Disponible en Pedidos Ya</a></li>
+            <li><a
+                href="https://www.pedidosya.com.ar/restaurantes/neuquen/plan-gourmet-pastas-san-luis-78a9a31f-b072-4c13-98a7-04e245b38f80-menu?search=plan%20gourmet%20san%20luis"
+                target="_blank">Sucursal San Luis - Disponible en Pedidos Ya</a></li>
+            <li><a
+                href="https://www.pedidosya.com.ar/restaurantes/neuquen/gourmet-lab-879a48f7-ab61-4ab5-9bae-2919757b6c9a-menu?search=plan%20gourmet"
+                target="_blank">Gourmet Lab market - Disponible en Pedidos Ya</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 
 
   <!-- 🔥 POP-UP DE PROMOCIÓN -->
   <div id="promo-popup">
     <div class="popup-content">
       <button id="close-popup" class="close-button" onclick="closePopup()">×</button>
-  
+
       <div class="popup-text">
-        <h2>¡Pronto llega el #29L!</h2><div class="popup-image">
-        <img src="./img/lasagna.png" alt="Promos">
-      </div>
-        <p>Falta poco para nuestras variedades con 20% de descuento</p>
-        
-        <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ" class="promo-button" target="_blank">Ver menú</a>
+        <h2>¡Es nuestro #8S!</h2>
+        <div class="popup-image">
+          <img src="./img/sorrentinos-cordon.png" alt="Promos">
+        </div>
+        <p>No te cuelgues y aprovecha 20% en nuestras variedades destacadas</p>
+
+        <a href="https://www.canva.com/design/DAGgabGMsKs/gJjUB3RNdS6pFfCQidT7DQ" class="promo-button"
+          target="_blank">Ver menú</a>
       </div>
     </div>
   </div>
-  
+
   <!-- 🔥 JAVASCRIPT DIRECTO EN EL HTML -->
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const popup = document.getElementById("promo-popup");
-    const closeButton = document.getElementById("close-popup");
+    document.addEventListener("DOMContentLoaded", () => {
+      const popup = document.getElementById("promo-popup");
+      const closeButton = document.getElementById("close-popup");
 
-    if (!popup || !closeButton) {
+      if (!popup || !closeButton) {
         console.error("Error: No se encontró el pop-up o el botón de cierre.");
         return;
-    }
+      }
 
-    // Obtiene la fecha de hoy en formato YYYY-MM-DD
-    const fechaHoy = new Date().toISOString().split("T")[0];
+      // Obtiene la fecha de hoy en formato YYYY-MM-DD
+      const fechaHoy = new Date().toISOString().split("T")[0];
 
-    // Verifica si ya se mostró el pop-up en la fecha actual
-    const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
+      // Verifica si ya se mostró el pop-up en la fecha actual
+      const ultimaFechaPopup = localStorage.getItem("ultimaFechaPopup");
 
-    // Lista de fechas habilitadas para mostrar el pop-up
-    const fechasHabilitadas = ["2025-06-26", "2025-06-27", "2025-06-28","2025-06-29"];
+      // Lista de fechas habilitadas para mostrar el pop-up
+      const fechasHabilitadas = ["2025-07-08", "2025-06-27", "2025-06-28", "2025-06-29"];
 
-    // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
-    const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
-    const ultimoAnuncioMostrado = localStorage.getItem("ultimoAnuncioMostrado");
+      // 🚀 REVISAMOS SI HAY UN NUEVO ANUNCIO (por si cambió el contenido del pop-up)
+      const anuncioActual = document.querySelector("#promo-popup .popup-text").innerText;
+      const ultimoAnuncioMostrado = localStorage.getItem("ultimoAnuncioMostrado");
 
-    if (fechasHabilitadas.includes(fechaHoy) && (ultimaFechaPopup !== fechaHoy || ultimoAnuncioMostrado !== anuncioActual)) {
+      if (fechasHabilitadas.includes(fechaHoy) && (ultimaFechaPopup !== fechaHoy || ultimoAnuncioMostrado !== anuncioActual)) {
         setTimeout(() => {
-            popup.style.display = "flex";
-            localStorage.setItem("ultimaFechaPopup", fechaHoy);
-            localStorage.setItem("ultimoAnuncioMostrado", anuncioActual);
+          popup.style.display = "flex";
+          localStorage.setItem("ultimaFechaPopup", fechaHoy);
+          localStorage.setItem("ultimoAnuncioMostrado", anuncioActual);
         }, 1500); // El pop-up se muestra 1.5 segundos después de cargar la página
-    }
+      }
 
-    // ✅ Al hacer clic en el botón de cierre, oculta el pop-up
-    closeButton.addEventListener("click", () => {
+      // ✅ Al hacer clic en el botón de cierre, oculta el pop-up
+      closeButton.addEventListener("click", () => {
         popup.style.display = "none";
+      });
     });
-});
 
   </script>
   <script>
-  function mostrarPopupDestacadoPG() {
-    document.getElementById("popupDestacadoPG").style.display = "block";
-  }
-
-  function cerrarPopupDestacadoPG() {
-    document.getElementById("popupDestacadoPG").style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    const popup = document.getElementById("popupDestacadoPG");
-    if (event.target === popup) {
-      popup.style.display = "none";
+    function mostrarPopupDestacadoPG() {
+      document.getElementById("popupDestacadoPG").style.display = "block";
     }
-  }
-</script>
-<script>
-  function irASucursales() {
-    cerrarPopupDestacadoPG(); // Cierra el popup
 
-    // Espera a que se cierre el popup, luego scrollea y abre el modal
-    setTimeout(() => {
-      const seccion = document.getElementById('seccionSucursales');
-      seccion.scrollIntoView({ behavior: 'smooth' });
+    function cerrarPopupDestacadoPG() {
+      document.getElementById("popupDestacadoPG").style.display = "none";
+    }
 
-      // Abre el modal de Bootstrap con JavaScript
-      const modal = new bootstrap.Modal(document.getElementById('modalUbicaciones'));
-      modal.show();
-    }, 400); // Ajustá si el popup tarda más o menos en cerrarse
-  }
-</script>
-<script>
-  function irAPedidosYa() {
-    cerrarPopupDestacadoPG(); // Cierra el popup del destacado
+    window.onclick = function (event) {
+      const popup = document.getElementById("popupDestacadoPG");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+  <script>
+    function irASucursales() {
+      cerrarPopupDestacadoPG(); // Cierra el popup
 
-    setTimeout(() => {
-      const seccion = document.getElementById('seccionPedidosYA');
-      seccion.scrollIntoView({ behavior: 'smooth' });
+      // Espera a que se cierre el popup, luego scrollea y abre el modal
+      setTimeout(() => {
+        const seccion = document.getElementById('seccionSucursales');
+        seccion.scrollIntoView({ behavior: 'smooth' });
 
-      const modalPedidosYa = new bootstrap.Modal(document.getElementById('pedidosyaModal'));
-      modalPedidosYa.show();
-    }, 400);
-  }
-</script>
-<script>
-  function estaDentroDeHorario(horas, ahora) {
-    return horas.some(rango => {
-      const [inicioHora, inicioMin] = rango.inicio.split(":").map(Number);
-      const [finHora, finMin] = rango.fin.split(":").map(Number);
-      const desde = inicioHora + inicioMin / 60;
-      const hasta = finHora + finMin / 60;
-      const actual = ahora.getHours() + ahora.getMinutes() / 60;
-      return actual >= desde && actual <= hasta;
-    });
-  }
+        // Abre el modal de Bootstrap con JavaScript
+        const modal = new bootstrap.Modal(document.getElementById('modalUbicaciones'));
+        modal.show();
+      }, 400); // Ajustá si el popup tarda más o menos en cerrarse
+    }
+  </script>
+  <script>
+    function irAPedidosYa() {
+      cerrarPopupDestacadoPG(); // Cierra el popup del destacado
 
-  function actualizarEstadoSucursal(idElemento, horarios) {
-    const ahora = new Date();
-    const dia = ahora.getDay(); // 0 = domingo, 1 = lunes...
+      setTimeout(() => {
+        const seccion = document.getElementById('seccionPedidosYA');
+        seccion.scrollIntoView({ behavior: 'smooth' });
 
-    const hoy =
-      dia === 0 ? "domingo" :
-      dia >= 1 && dia <= 6 ? "lunesASabado" : "cerrado";
+        const modalPedidosYa = new bootstrap.Modal(document.getElementById('pedidosyaModal'));
+        modalPedidosYa.show();
+      }, 400);
+    }
+  </script>
+  <script>
+    function estaDentroDeHorario(horas, ahora) {
+      return horas.some(rango => {
+        const [inicioHora, inicioMin] = rango.inicio.split(":").map(Number);
+        const [finHora, finMin] = rango.fin.split(":").map(Number);
+        const desde = inicioHora + inicioMin / 60;
+        const hasta = finHora + finMin / 60;
+        const actual = ahora.getHours() + ahora.getMinutes() / 60;
+        return actual >= desde && actual <= hasta;
+      });
+    }
 
-    const horasSucursal = horarios[hoy] || [];
-    const estaAbierto = estaDentroDeHorario(horasSucursal, ahora);
+    function actualizarEstadoSucursal(idElemento, horarios) {
+      const ahora = new Date();
+      const dia = ahora.getDay(); // 0 = domingo, 1 = lunes...
 
-    const estadoElemento = document.getElementById(idElemento);
-    estadoElemento.textContent = estaAbierto ? "Abierto ahora" : "Cerrado";
-    estadoElemento.className = `estado-sucursal ${estaAbierto ? "abierto" : "cerrado"}`;
-  }
+      const hoy =
+        dia === 0 ? "domingo" :
+          dia >= 1 && dia <= 6 ? "lunesASabado" : "cerrado";
 
-  // Horarios definidos por sucursal
-  const horariosBelgrano = {
-    lunesASabado: [{ inicio: "09:00", fin: "22:00" }],
-    domingo: [
-      { inicio: "10:00", fin: "14:00" },
-      { inicio: "18:30", fin: "22:00" }
-    ]
-  };
+      const horasSucursal = horarios[hoy] || [];
+      const estaAbierto = estaDentroDeHorario(horasSucursal, ahora);
 
-  const horariosLeloir = {
-    lunesASabado: [{ inicio: "08:00", fin: "22:00" }],
-    domingo: [
-      { inicio: "10:00", fin: "14:30" },
-      { inicio: "18:30", fin: "22:00" }
-    ]
-  };
+      const estadoElemento = document.getElementById(idElemento);
+      estadoElemento.textContent = estaAbierto ? "Abierto ahora" : "Cerrado";
+      estadoElemento.className = `estado-sucursal ${estaAbierto ? "abierto" : "cerrado"}`;
+    }
 
-  const horariosSanLuis = {
-    lunesASabado: [{ inicio: "09:30", fin: "14:00" },
-    { inicio: "18:30", fin: "22:00" }],
-    domingo: [
-      { inicio: "10:00", fin: "14:30" },
-      { inicio: "18:30", fin: "22:00" }
-    ]
-  };
+    // Horarios definidos por sucursal
+    const horariosBelgrano = {
+      lunesASabado: [{ inicio: "09:00", fin: "22:00" }],
+      domingo: [
+        { inicio: "10:00", fin: "14:00" },
+        { inicio: "18:30", fin: "22:00" }
+      ]
+    };
 
-   const horariosGourmetLab = {
-    lunesASabado: [{ inicio: "07:30", fin: "22:30" }],
-    domingo: [
-      { inicio: "10:00", fin: "14:30" },
-      { inicio: "19:00", fin: "22:30" }
-    ]
-  };
+    const horariosLeloir = {
+      lunesASabado: [{ inicio: "08:00", fin: "22:00" }],
+      domingo: [
+        { inicio: "10:00", fin: "14:30" },
+        { inicio: "18:30", fin: "22:00" }
+      ]
+    };
 
-  function actualizarTodosLosEstados() {
-    actualizarEstadoSucursal("estado-belgrano", horariosBelgrano);
-    actualizarEstadoSucursal("estado-leloir", horariosLeloir);
-    actualizarEstadoSucursal("estado-sanluis", horariosSanLuis);
-    actualizarEstadoSucursal("estado-gourmetlab", horariosGourmetLab);
-  }
+    const horariosSanLuis = {
+      lunesASabado: [{ inicio: "09:30", fin: "14:00" },
+      { inicio: "18:30", fin: "22:00" }],
+      domingo: [
+        { inicio: "10:00", fin: "14:30" },
+        { inicio: "18:30", fin: "22:00" }
+      ]
+    };
 
-  // Ejecutar al cargar
-  actualizarTodosLosEstados();
+    const horariosGourmetLab = {
+      lunesASabado: [{ inicio: "07:30", fin: "22:30" }],
+      domingo: [
+        { inicio: "10:00", fin: "14:30" },
+        { inicio: "19:00", fin: "22:30" }
+      ]
+    };
 
-  // Actualizar cada 60 segundos
-  setInterval(actualizarTodosLosEstados, 60000);
-</script>
+    function actualizarTodosLosEstados() {
+      actualizarEstadoSucursal("estado-belgrano", horariosBelgrano);
+      actualizarEstadoSucursal("estado-leloir", horariosLeloir);
+      actualizarEstadoSucursal("estado-sanluis", horariosSanLuis);
+      actualizarEstadoSucursal("estado-gourmetlab", horariosGourmetLab);
+    }
+
+    // Ejecutar al cargar
+    actualizarTodosLosEstados();
+
+    // Actualizar cada 60 segundos
+    setInterval(actualizarTodosLosEstados, 60000);
+  </script>
 
 
   <script src="./js/script.js"></script>
 </body>
+
 </html>
